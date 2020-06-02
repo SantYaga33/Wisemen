@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Intro.module.css'
 import soundOf from '../../icons/sound-of.svg'
 import soundOn from '../../icons/sound-on.svg'
-import intro from '../../video/intro-compress2.mp4'
+import intro from '../../video/Intro-53-commpres.mp4'
 import poster from '../../images/main-bg.png'
 
 
@@ -12,7 +12,7 @@ const Intro = () => {
 
 	useEffect (() => {
 		let vid = document.getElementById ('intro');
-		vid.volume = 0.15;
+		vid.volume = 0.25;
 	}, []);
 
 	return (

@@ -9,7 +9,9 @@ import poster from '../../images/main-bg.png'
 
 
 const Root = () => {
+
 	let [ sound, setSound ] = useState (true);
+
 	useEffect (() => {
 		let vid = document.getElementById ('intro');
 		vid.volume = 0.15;
