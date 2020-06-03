@@ -15,9 +15,9 @@ const Intro = () => {
 		let vid = document.getElementById ('intro');
 		vid.volume = 0.25;
 		vid.addEventListener ('playing', () => {
-			setIconlash(!iconFlash);
+			setIconlash(true);
 			setTimeout( () => {
-				setIconlash(!iconFlash);
+				setIconlash(false);
 			}, 3000);
 		}, true);
 

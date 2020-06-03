@@ -11,29 +11,38 @@ import poster from '../../images/main-bg.png'
 const Root = () => {
 
 	let [ sound, setSound ] = useState (true);
+	let [ iconFlash, setIconlash ] = useState (false);
 
 	useEffect (() => {
-		let vid = document.getElementById ('intro');
-		vid.volume = 0.15;
+		let vid = document.getElementById ('root');
+		vid.volume = 0.4;
+		vid.addEventListener ('playing', () => {
+			setIconlash(true);
+			setTimeout( () => {
+				setIconlash(false);
+			}, 3000);
+		}, true);
+
 	}, []);
+
+	const classIcon = iconFlash === true ? `${styles.root__icon_flash}` : `${styles.root__icon}`
 
 	return (
 		<div className={styles.root}>
-			<video className={styles.root__video} id='intro' autoPlay loop muted={sound}
+			<video className={styles.root__video} id='root' autoPlay loop muted={sound}
 				   poster={poster}>
 				<source src={videomp4} type="video/mp4"/>
 				<source src={videowebm} type="video/webm"/>
-				<source src={videoogg} type="video/ogg"/>
 			</video>
 			{
 				!sound &&
-				<div className={styles.root__icon} onClick={() => setSound (!sound)}>
+				<div className={classIcon} onClick={() => setSound (!sound)}>
 					<img src={soundOf} alt='soundOn'/>
 				</div>
 			}
 			{
 				sound &&
-				<div className={styles.root__icon} onClick={() => setSound (!sound)}>
+				<div className={classIcon} onClick={() => setSound (!sound)}>
 					<img src={soundOn} alt='soundOf'/>
 				</div>
 			}
