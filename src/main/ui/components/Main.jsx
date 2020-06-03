@@ -5,6 +5,7 @@ import Root from './root/Root';
 import Menu from './menu/Menu';
 import Intro from "./intro/Intro";
 import Scroll from "../common/scroll/Scroll";
+import Loader from "../common/loader/Loader";
 
 const Main = () => {
 
@@ -30,6 +31,7 @@ const Main = () => {
 					!toggleBg &&
 					<>
 						<Root/>
+						<Loader/>
 						<Scroll/>
 					</>
 				}
