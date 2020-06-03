@@ -30,10 +30,6 @@ const Main = () => {
 					<Root/>
 				}
 
-
-
-
-
 				<Menu/>
 			</div>
 

@@ -9,11 +9,22 @@ import poster from '../../images/main-bg.png'
 const Intro = () => {
 
 	let [ sound, setSound ] = useState (true);
+	let [ iconFlash, setIconlash ] = useState (false);
 
 	useEffect (() => {
 		let vid = document.getElementById ('intro');
 		vid.volume = 0.25;
+		vid.addEventListener ('playing', () => {
+			setIconlash(!iconFlash);
+			setTimeout( () => {
+				setIconlash(!iconFlash);
+			}, 3000);
+		}, true);
+
 	}, []);
+
+	const classIcon = iconFlash === true ? `${styles.intro__icon_flash}` : `${styles.intro__icon}`
+
 
 	return (
 		<div className={styles.intro}>
@@ -21,17 +32,16 @@ const Intro = () => {
 				   poster={poster}>
 				<source src={intro} type="video/mp4"/>
 				{/*<source src={videowebm} type="video/webm"/>*/}
-				{/*<source src={videoogg} type="video/ogg"/>*/}
 			</video>
 			{
 				!sound &&
-				<div className={styles.intro__icon} onClick={() => setSound (!sound)}>
+				<div className={classIcon} onClick={() => setSound (!sound)}>
 					<img src={soundOf} alt='soundOn'/>
 				</div>
 			}
 			{
 				sound &&
-				<div className={styles.intro__icon} onClick={() => setSound (!sound)}>
+				<div className={classIcon} onClick={() => setSound (!sound)}>
 					<img src={soundOn} alt='soundOf'/>
 				</div>
 			}
