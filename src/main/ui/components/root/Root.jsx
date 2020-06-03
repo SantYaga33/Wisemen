@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styles from './Root.module.css'
 import videomp4 from '../../video/main-bg-video-20.mp4'
 import videowebm from '../../video/main-bg-video-20.mp4'
-import videoogg from '../../video/main-bg-video-20.mp4'
 import soundOf from '../../icons/sound-of.svg'
 import soundOn from '../../icons/sound-on.svg'
 import poster from '../../images/main-bg.png'
@@ -17,15 +16,15 @@ const Root = () => {
 		let vid = document.getElementById ('root');
 		vid.volume = 0.4;
 		vid.addEventListener ('playing', () => {
-			setIconlash(true);
-			setTimeout( () => {
-				setIconlash(false);
+			setIconlash (true);
+			setTimeout (() => {
+				setIconlash (false);
 			}, 3000);
 		}, true);
 
 	}, []);
 
-	const classIcon = iconFlash === true ? `${styles.root__icon_flash}` : `${styles.root__icon}`
+	const classIcon = iconFlash === true ? `${styles.root__icon_flash}` : `${styles.root__icon}`;
 
 	return (
 		<div className={styles.root}>

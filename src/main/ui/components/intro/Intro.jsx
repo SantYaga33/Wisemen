@@ -23,8 +23,7 @@ const Intro = () => {
 
 	}, []);
 
-	const classIcon = iconFlash === true ? `${styles.intro__icon_flash}` : `${styles.intro__icon}`
-
+	const classIcon = iconFlash === true ? `${styles.intro__icon_flash}` : `${styles.intro__icon}`;
 
 	return (
 		<div className={styles.intro}>
