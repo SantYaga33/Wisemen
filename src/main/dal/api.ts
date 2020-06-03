@@ -57,6 +57,9 @@ export const api = {
         rememberMe
       })
   },
+  logout() {
+    return instance.delete<LoginType>(`/auth/login`)
+  },
   registration(email: string, password: string) {
     return instance.post<RegistrationType>(
       `/auth/register`,
@@ -67,7 +70,7 @@ export const api = {
   },
   restorePsw(email: string, html1: string, html2: string) {
     return instance.post<{ success: boolean }>(
-      ` /auth/forgot`,
+      `/auth/forgot`,
       {
         email,
         html1,
