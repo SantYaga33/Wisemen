@@ -32,9 +32,9 @@ const Main = () => {
 					<>
 						<Root/>
 						<Loader/>
-						<Scroll/>
 					</>
 				}
+				<Scroll/>
 				<Menu/>
 			</div>
 

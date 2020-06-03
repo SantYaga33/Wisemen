@@ -13,7 +13,7 @@
     transition: all 0.3s ease;
 }
 
-.scroll__wrap:active {
+.scroll__wrap_active{
     transform: scale(1);
     transition: all 0.3s ease;
 }
@@ -29,5 +29,5 @@
     position: absolute;
     top: 0;
     right: 0;
-
+    cursor: pointer;
 }
