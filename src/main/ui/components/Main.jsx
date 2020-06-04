@@ -12,6 +12,7 @@ import Routs from "./routes/Routes";
 const Main = () => {
 
 	let [ toggleBg, setBg ] = useState (true);
+	let [ modal, setModal ] = useState (false);
 
 	useEffect (() => {
 		let vid = document.getElementById ('intro');
@@ -23,7 +24,7 @@ const Main = () => {
 
 	return (
 		<div>
-			<Header/>
+			<Header setModal={setModal}/>
 				<div className={styles.main__wrap}>
 					{
 						toggleBg &&
@@ -36,7 +37,8 @@ const Main = () => {
 							<Loader/>
 						</>
 					}
-					<Scroll/>
+
+					<Scroll modal={modal} setModal={setModal}/>
 					<Menu/>
 				</div>
 
