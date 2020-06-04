@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.5c65ad09.chunk.css",
-    "main.js": "/Wisemen/static/js/main.2ef9c542.chunk.js",
-    "main.js.map": "/Wisemen/static/js/main.2ef9c542.chunk.js.map",
+    "main.css": "/Wisemen/static/css/main.600252cd.chunk.css",
+    "main.js": "/Wisemen/static/js/main.e4f85866.chunk.js",
+    "main.js.map": "/Wisemen/static/js/main.e4f85866.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.b05fba90.js",
     "runtime-main.js.map": "/Wisemen/static/js/runtime-main.b05fba90.js.map",
-    "static/js/2.aa45df7b.chunk.js": "/Wisemen/static/js/2.aa45df7b.chunk.js",
-    "static/js/2.aa45df7b.chunk.js.map": "/Wisemen/static/js/2.aa45df7b.chunk.js.map",
+    "static/js/2.83a26386.chunk.js": "/Wisemen/static/js/2.83a26386.chunk.js",
+    "static/js/2.83a26386.chunk.js.map": "/Wisemen/static/js/2.83a26386.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.fd10c0d875f86cf25cbabdbed8e7f98e.js": "/Wisemen/precache-manifest.fd10c0d875f86cf25cbabdbed8e7f98e.js",
+    "precache-manifest.8b2da2bdf3ba644a2de17fc6e247c234.js": "/Wisemen/precache-manifest.8b2da2bdf3ba644a2de17fc6e247c234.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.5c65ad09.chunk.css.map": "/Wisemen/static/css/main.5c65ad09.chunk.css.map",
-    "static/js/2.aa45df7b.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.aa45df7b.chunk.js.LICENSE.txt",
+    "static/css/main.600252cd.chunk.css.map": "/Wisemen/static/css/main.600252cd.chunk.css.map",
+    "static/js/2.83a26386.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.83a26386.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Wisemen/static/media/CSGrimrock.bd07c961.woff",
+    "static/media/Intro-53-commpres-webm.webm": "/Wisemen/static/media/Intro-53-commpres-webm.f9da5a9c.webm",
     "static/media/Intro-53-commpres.mp4": "/Wisemen/static/media/Intro-53-commpres.7dbea0cc.mp4",
     "static/media/Wisemen-shadow2.png": "/Wisemen/static/media/Wisemen-shadow2.19930786.png",
     "static/media/about-shadow2.png": "/Wisemen/static/media/about-shadow2.ce0590f2.png",
@@ -28,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b05fba90.js",
-    "static/js/2.aa45df7b.chunk.js",
-    "static/css/main.5c65ad09.chunk.css",
-    "static/js/main.2ef9c542.chunk.js"
+    "static/js/2.83a26386.chunk.js",
+    "static/css/main.600252cd.chunk.css",
+    "static/js/main.e4f85866.chunk.js"
   ]
 }
