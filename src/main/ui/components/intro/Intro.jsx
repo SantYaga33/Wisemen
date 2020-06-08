@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import styles from './Intro.module.css'
-import soundOf from '../../icons/sound-of.svg'
-import soundOn from '../../icons/sound-on.svg'
-import skip from '../../icons/skip-circle .svg'
-import intro from '../../video/Intro-53-commpres.mp4'
-import intro_webm from '../../video/Intro-53-commpres-webm.webm'
-import poster from '../../images/main-bg.png'
+import styles from './Intro.module.css';
+import soundOf from '../../icons/sound-of.svg';
+import soundOn from '../../icons/sound-on.svg';
+import skip from '../../icons/skip-circle .svg';
+import intro from '../../video/Intro-53-commpres.mp4';
+import intro_webm from '../../video/Intro-53-commpres-webm.webm';
+import poster from '../../images/main-bg.webp';
 
 
 const Intro = ({ setBg }) => {
@@ -46,7 +46,8 @@ const Intro = ({ setBg }) => {
 					<img src={soundOn} alt='soundOf'/>
 				</div>
 			}
-			We are sorry that you cannot see the intro
+			<p>Your browser doesn't support HTML5 video.</p>
+			<p>We are sorry that you cannot see the video.</p>
 			<div className={styles.intro__icon_skip } onClick={() => setBg (false)}>
 				<img src={skip} alt='skip'/>
 			</div>

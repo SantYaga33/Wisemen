@@ -11,18 +11,20 @@
     align-items: center;
     transform: scale(0);
     transition: all 0.3s ease;
+    font-family: 'CS Grimrock', sans-serif;
 }
 
-.scroll__wrap_active{
+.scroll__wrap_active {
     transform: scale(1);
     transition: all 0.3s ease;
 }
 
 .scroll__img {
     position: relative;
-    width: 30%;
-
+    max-width: 500px;
+    min-width: 355px;
 }
+
 .scroll__icon {
     width: 20px;
     height: 20px;
@@ -30,4 +32,13 @@
     top: 0;
     right: 0;
     cursor: pointer;
+}
+
+.scroll__title {
+    color:  #3e2723;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: translateX(-50%);
+    font-size: 18px;
 }

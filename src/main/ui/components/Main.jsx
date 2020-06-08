@@ -13,9 +13,14 @@ const Main = () => {
 
 	let [ toggleBg, setBg ] = useState (true);
 	let [ modal, setModal ] = useState (false);
+	let [ loader, setLoader ] = useState (true);
 
 	useEffect (() => {
 		let vid = document.getElementById ('intro');
+		// vid.addEventListener ('canplaythrough', () => {
+		// 	setLoader (false);
+		// }, true);
+
 		vid.addEventListener ('ended', () => {
 			setBg (!toggleBg);
 		}, true);
@@ -26,6 +31,11 @@ const Main = () => {
 		<div>
 			<Header setModal={setModal} setBg={setBg} toggleBg={toggleBg}/>
 				<div className={styles.main__wrap}>
+					{/*{*/}
+					{/*	loader &&*/}
+					{/*	<Loader/>*/}
+					{/*}*/}
+
 					{
 						toggleBg &&
 						<Intro setBg={setBg}/>
@@ -42,6 +52,7 @@ const Main = () => {
 					<Menu/>
 				</div>
 
+			{/*<Header/>*/}
 			{/*<Test/>*/}
 			{/*<Routs/>*/}
 		</div>
