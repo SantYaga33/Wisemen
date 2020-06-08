@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.ccc21bde.chunk.css",
-    "main.js": "/Wisemen/static/js/main.d890f19e.chunk.js",
-    "main.js.map": "/Wisemen/static/js/main.d890f19e.chunk.js.map",
+    "main.css": "/Wisemen/static/css/main.85fa15b4.chunk.css",
+    "main.js": "/Wisemen/static/js/main.2ffae56a.chunk.js",
+    "main.js.map": "/Wisemen/static/js/main.2ffae56a.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.b05fba90.js",
     "runtime-main.js.map": "/Wisemen/static/js/runtime-main.b05fba90.js.map",
-    "static/js/2.1b3d22b2.chunk.js": "/Wisemen/static/js/2.1b3d22b2.chunk.js",
-    "static/js/2.1b3d22b2.chunk.js.map": "/Wisemen/static/js/2.1b3d22b2.chunk.js.map",
+    "static/js/2.960d93f8.chunk.js": "/Wisemen/static/js/2.960d93f8.chunk.js",
+    "static/js/2.960d93f8.chunk.js.map": "/Wisemen/static/js/2.960d93f8.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.bccc8a42f396c6628d23cb2edb76814d.js": "/Wisemen/precache-manifest.bccc8a42f396c6628d23cb2edb76814d.js",
+    "precache-manifest.1e84b8e38b661ff9b693a36f9608a584.js": "/Wisemen/precache-manifest.1e84b8e38b661ff9b693a36f9608a584.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.ccc21bde.chunk.css.map": "/Wisemen/static/css/main.ccc21bde.chunk.css.map",
-    "static/js/2.1b3d22b2.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.1b3d22b2.chunk.js.LICENSE.txt",
+    "static/css/main.85fa15b4.chunk.css.map": "/Wisemen/static/css/main.85fa15b4.chunk.css.map",
+    "static/js/2.960d93f8.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.960d93f8.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Wisemen/static/media/CSGrimrock.bd07c961.woff",
     "static/media/Intro-53-commpres-webm.webm": "/Wisemen/static/media/Intro-53-commpres-webm.f9da5a9c.webm",
     "static/media/Intro-53-commpres.mp4": "/Wisemen/static/media/Intro-53-commpres.7dbea0cc.mp4",
@@ -22,7 +22,7 @@
     "static/media/login-shadow.png": "/Wisemen/static/media/login-shadow.ae8eb5b9.png",
     "static/media/main-bg-video-20.mp4": "/Wisemen/static/media/main-bg-video-20.05dde4ff.mp4",
     "static/media/main-bg-video-20.webm": "/Wisemen/static/media/main-bg-video-20.45ff871c.webm",
-    "static/media/main-bg.png": "/Wisemen/static/media/main-bg.01fb4adf.png",
+    "static/media/Root.module.css": "/Wisemen/static/media/main-bg.01fb4adf.png",
     "static/media/main-bg.webp": "/Wisemen/static/media/main-bg.3f952342.webp",
     "static/media/point-shadow2.png": "/Wisemen/static/media/point-shadow2.cb23fb2f.png",
     "static/media/scroll.webp": "/Wisemen/static/media/scroll.32469697.webp",
@@ -33,8 +33,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b05fba90.js",
-    "static/js/2.1b3d22b2.chunk.js",
-    "static/css/main.ccc21bde.chunk.css",
-    "static/js/main.d890f19e.chunk.js"
+    "static/js/2.960d93f8.chunk.js",
+    "static/css/main.85fa15b4.chunk.css",
+    "static/js/main.2ffae56a.chunk.js"
   ]
 }
