@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d3590f0896bc3f410bb56ab97d4aae95",
+    "revision": "9064bae706749d1c66fa6235f305892d",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "7556bfafe88ac74b3deb",
+    "revision": "dd4f5b2ecc3bd1b4d173",
     "url": "/Wisemen/static/css/main.ccc21bde.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/js/2.1b3d22b2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7556bfafe88ac74b3deb",
-    "url": "/Wisemen/static/js/main.62be0c7a.chunk.js"
+    "revision": "dd4f5b2ecc3bd1b4d173",
+    "url": "/Wisemen/static/js/main.d890f19e.chunk.js"
   },
   {
     "revision": "6c9556d0392e9372e396",
@@ -88,8 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/point-shadow2.cb23fb2f.png"
   },
   {
-    "revision": "9ce1100138a020e26b2da5b89d8e95c9",
-    "url": "/Wisemen/static/media/scroll.9ce11001.png"
+    "revision": "32469697aeb519186bd3c8480d1e5e19",
+    "url": "/Wisemen/static/media/scroll.32469697.webp"
   },
   {
     "revision": "72478aeafb40a3e0c7d66d072f312da0",
