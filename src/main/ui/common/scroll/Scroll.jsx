@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Scroll.module.css';
 import scrollBg from '../../images/scroll.webp';
-import closeIcon from '../../icons/cancel .png';
+import closeIcon from '../../icons/cancel.png';
 import Loader from "../loader/Loader";
 import Input1 from "../Input/Input1";
 import Input from "../Input/Input";
+import Form1 from "../form/Form1";
 
 
 const Scroll = ({ modal, setModal }) => {
@@ -23,7 +24,7 @@ const Scroll = ({ modal, setModal }) => {
 				{/*<h2  className={styles.scroll__title}>Registration</h2>*/}
 				<h2  className={styles.scroll__title}>Login</h2>
 
-				<Input1/>
+				<Form1/>
 
 				<div className={styles.scroll__icon}  >
 					<img src={closeIcon} alt="cancel-Icon" id='closeIconId'/>
