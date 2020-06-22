@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f65795ca9597f22eea34c7ef4b4ab205",
+    "revision": "3be8c5ca1e1b7c4b8248729c8c734733",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "9602199fe984a2873e18",
-    "url": "/Wisemen/static/css/main.b8b93319.chunk.css"
+    "revision": "0d0dc3b28c7e16a54733",
+    "url": "/Wisemen/static/css/main.e3a1b668.chunk.css"
   },
   {
-    "revision": "0e27e1a2d5dfb0effdd9",
-    "url": "/Wisemen/static/js/2.f56ee5aa.chunk.js"
+    "revision": "403eef7c9b18133f0dd9",
+    "url": "/Wisemen/static/js/2.f98128f4.chunk.js"
   },
   {
     "revision": "216e537bacc64f9dbaabd26649a9ab95",
-    "url": "/Wisemen/static/js/2.f56ee5aa.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.f98128f4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9602199fe984a2873e18",
-    "url": "/Wisemen/static/js/main.cb83ec65.chunk.js"
+    "revision": "0d0dc3b28c7e16a54733",
+    "url": "/Wisemen/static/js/main.dcec9c92.chunk.js"
   },
   {
     "revision": "6c9556d0392e9372e396",
@@ -56,6 +56,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/about-shadow2.ce0590f2.png"
   },
   {
+    "revision": "738f9628fe09b887c7bdd680b8c88c3d",
+    "url": "/Wisemen/static/media/clouse-shadow2.738f9628.png"
+  },
+  {
     "revision": "72a9f6084e2093692cbdc6c18e824813",
     "url": "/Wisemen/static/media/cтена-218.72a9f608.png"
   },
@@ -82,6 +86,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3f952342d177b6924aa85c461038b59e",
     "url": "/Wisemen/static/media/main-bg.3f952342.webp"
+  },
+  {
+    "revision": "39a1c41afd0ecccead8d523d8be48c52",
+    "url": "/Wisemen/static/media/menu-blue.39a1c41a.png"
+  },
+  {
+    "revision": "43b209ceeb8e676c35189f7730552f58",
+    "url": "/Wisemen/static/media/menu-green-450-2-min.43b209ce.png"
+  },
+  {
+    "revision": "0f16d7cd6cbf52dc9cc72394c5b1dc62",
+    "url": "/Wisemen/static/media/menu-red-min.0f16d7cd.png"
+  },
+  {
+    "revision": "421efdc07a77adfdcaeaa5386600cb59",
+    "url": "/Wisemen/static/media/menu-white-600-1-min.421efdc0.png"
   },
   {
     "revision": "cb23fb2fd0e7b4115b78dceda0565116",
