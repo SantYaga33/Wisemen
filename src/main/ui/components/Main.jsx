@@ -4,23 +4,17 @@ import Header from "./header/Header";
 import Root from './root/Root';
 import Menu from './menu/Menu';
 import Intro from "./intro/Intro";
-import Scroll from "../common/scroll/Scroll";
 import Loader from "../common/loader/Loader";
-import Test from "../../features/test/Test";
-import Routs from "./routes/Routes";
+import FormRoutes from "./routes/FormRoutes";
+
 
 const Main = () => {
 
 	let [ toggleBg, setBg ] = useState (true);
-	let [ modal, setModal ] = useState (false);
-	let [ loader, setLoader ] = useState (true);
+	// let {skipIntro} = useParams();
 
 	useEffect (() => {
 		let vid = document.getElementById ('intro');
-		// vid.addEventListener ('canplaythrough', () => {
-		// 	setLoader (false);
-		// }, true);
-
 		vid.addEventListener ('ended', () => {
 			setBg (!toggleBg);
 		}, true);
@@ -29,13 +23,8 @@ const Main = () => {
 
 	return (
 		<div>
-			<Header setModal={setModal} setBg={setBg} toggleBg={toggleBg}/>
+			<Header setBg={setBg} toggleBg={toggleBg}/>
 				<div className={styles.main__wrap}>
-					{/*{*/}
-					{/*	loader &&*/}
-					{/*	<Loader/>*/}
-					{/*}*/}
-
 					{
 						toggleBg &&
 						<Intro setBg={setBg}/>
@@ -44,13 +33,11 @@ const Main = () => {
 						!toggleBg &&
 						<>
 							<Root/>
-							<Loader/>
 						</>
 					}
-
-					<Scroll modal={modal} setModal={setModal}/>
-					<Menu/>
 				</div>
+			<FormRoutes/>
+			<Menu/>
 
 			{/*<Header/>*/}
 			{/*<Test/>*/}
