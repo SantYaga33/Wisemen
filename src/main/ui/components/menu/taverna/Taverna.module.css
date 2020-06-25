@@ -24,23 +24,21 @@
 }
 
 .taverna__main {
-    width: 1200px;
-    max-width: 1200px;
+    width: 1140px;
+    max-width: 1140px;
     height: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
 
-    flex-basis: 1200px;
+    flex-basis: 1140px;
 }
 
 .taverna__right {
     flex-grow: 1;
     background: transparent;
 }
-
-/*====== */
 
 .main__item {
     display: flex;
@@ -51,25 +49,34 @@
     border-left: 1px solid #004d40;
     height: 100%;
     -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0) ;
     box-shadow: 0 2px 2px #000;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     mix-blend-mode: color-dodge;
-
     overflow: hidden;
-
 
     cursor: pointer;
 }
 
-.main__item h1 {
+.main__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main__item  .main__link h1 {
     mix-blend-mode: color-dodge;
     font-size: 36px;
     position: absolute;
     top: 100%;
     transition: top ease 0.5s;
-
 
 }
 
@@ -147,14 +154,12 @@
     background-repeat: no-repeat;
 }
 
-/*анимация перехода от чб до цветного*/
-
+/*анимация перехода от чб до цветного + увеличение картинки*/
 
 @keyframes toColour {
     0% {
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
-
     }
     25% {
         -webkit-filter: grayscale(75%);
@@ -164,7 +169,7 @@
         -webkit-filter: grayscale(50%);
         filter: grayscale(50%);
     }
-    50% {
+    75% {
         -webkit-filter: grayscale(25%);
         filter: grayscale(25%);
     }
@@ -195,7 +200,6 @@
     animation-fill-mode: forwards;
     -webkit-animation-direction: normal, alternate, normal;
     animation-direction: normal, alternate, normal;
-
 
 }
 
