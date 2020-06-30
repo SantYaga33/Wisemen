@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Game.module.css';
 import ava from '../../images/ava.jpg';
 import DecksRoutes, {
@@ -11,9 +11,14 @@ import { NavLink } from "react-router-dom";
 import Card from "./card/Card";
 import CardDownside from "./card/CardDownside";
 import Buttons from "./buttons/Buttons";
+import bg_1  from './../../images/card-bg/card-bg-1.jpg';
+
 
 
 const Game = () => {
+
+	const [ cardface , setCardFace ] = useState(true);
+	const [ cardBg , setCardBg ] = useState(bg_1);
 
 	return (
 		<div className={styles.game__wrap}>
@@ -27,7 +32,7 @@ const Game = () => {
 								<img src={ava} alt="avatar"/>
 							</div>
 							<div className={styles.user__nick}>
-								<span>Natasha</span>
+								<span>Leat</span>
 							</div>
 						</div>
 						<div className={styles.header__info}>
@@ -92,14 +97,14 @@ const Game = () => {
 					</div>
 					<div className={styles.content__main}>
 						<div className={styles.main__card}>
-							{/*<Card/>*/}
-							<CardDownside/>
+							{ cardface && 	<Card cardBg={cardBg} setCardFace={setCardFace} cardface={cardface}/> }
+							{ !cardface && 	<CardDownside/> }
 							<div className={styles.content__buttons}>
-								<Buttons/>
+								<Buttons setCardFace={setCardFace} cardface={cardface} setCardBg={setCardBg}/>
 							</div>
 						</div>
 						<div className={styles.main__deck}>
-							<DecksRoutes/>
+							<DecksRoutes setCardBg={setCardBg}/>
 						</div>
 					</div>
 
