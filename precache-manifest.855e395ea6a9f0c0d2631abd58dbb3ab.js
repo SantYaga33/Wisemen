@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b4b5525a0f3c3a52d9f477683a719ead",
+    "revision": "f2616f1623c4bb366f72b37e2ffbcc57",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "e7f13da7637ad53e72ff",
-    "url": "/Wisemen/static/css/main.40274841.chunk.css"
+    "revision": "142f72c4337a4712b093",
+    "url": "/Wisemen/static/css/main.5d85c5f2.chunk.css"
   },
   {
-    "revision": "169fe5f741506889f081",
-    "url": "/Wisemen/static/js/2.1d97cf77.chunk.js"
+    "revision": "1690d7682d9babc770f3",
+    "url": "/Wisemen/static/js/2.d2a4a05e.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.1d97cf77.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.d2a4a05e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e7f13da7637ad53e72ff",
-    "url": "/Wisemen/static/js/main.3120f80e.chunk.js"
+    "revision": "142f72c4337a4712b093",
+    "url": "/Wisemen/static/js/main.3170e99b.chunk.js"
   },
   {
-    "revision": "6c9556d0392e9372e396",
-    "url": "/Wisemen/static/js/runtime-main.b05fba90.js"
+    "revision": "4ecfdefd650125f61227",
+    "url": "/Wisemen/static/js/runtime-main.f6a3cafd.js"
   },
   {
     "revision": "106a1379dae3231365ac7d6269374f26",
@@ -48,6 +48,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/Intro-53-commpres.7dbea0cc.mp4"
   },
   {
+    "revision": "83f9e0b23b0b877614f1d143bf6315af",
+    "url": "/Wisemen/static/media/LOGOUT.83f9e0b2.png"
+  },
+  {
     "revision": "19930786992ef91c583fc1a43f5e0b67",
     "url": "/Wisemen/static/media/Wisemen-shadow2.19930786.png"
   },
@@ -70,6 +74,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8faff2d7e956643814ccaf3510909b4e",
     "url": "/Wisemen/static/media/card-bg-1.8faff2d7.jpg"
+  },
+  {
+    "revision": "4be82c7770ca037152a80594ce35c80b",
+    "url": "/Wisemen/static/media/card-bg-2.4be82c77.jpg"
+  },
+  {
+    "revision": "6b8522cfd1bde1110aeed78cde09d38d",
+    "url": "/Wisemen/static/media/card-bg-3.6b8522cf.jpg"
+  },
+  {
+    "revision": "7ccdfafd1b129c822a8e9e5784db3646",
+    "url": "/Wisemen/static/media/card-bg-4.7ccdfafd.jpg"
   },
   {
     "revision": "738f9628fe09b887c7bdd680b8c88c3d",
