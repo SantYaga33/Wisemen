@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2616f1623c4bb366f72b37e2ffbcc57",
+    "revision": "8af49d37b0df1c2d39377c7c61735cc0",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "142f72c4337a4712b093",
-    "url": "/Wisemen/static/css/main.5d85c5f2.chunk.css"
+    "revision": "e024a576c612ca2177d9",
+    "url": "/Wisemen/static/css/main.6c58ded2.chunk.css"
   },
   {
-    "revision": "1690d7682d9babc770f3",
-    "url": "/Wisemen/static/js/2.d2a4a05e.chunk.js"
+    "revision": "0e45c237898084bc36ba",
+    "url": "/Wisemen/static/js/2.b41a03e2.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.d2a4a05e.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.b41a03e2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "142f72c4337a4712b093",
-    "url": "/Wisemen/static/js/main.3170e99b.chunk.js"
+    "revision": "e024a576c612ca2177d9",
+    "url": "/Wisemen/static/js/main.21a02e35.chunk.js"
   },
   {
     "revision": "4ecfdefd650125f61227",
@@ -68,6 +68,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/about-shadow2.ce0590f2.png"
   },
   {
+    "revision": "1daa40531500e0ca3ba71d52c815b02f",
+    "url": "/Wisemen/static/media/ava-default.1daa4053.png"
+  },
+  {
     "revision": "9f9cc2c34b2797bf9e8b4a123e3472f6",
     "url": "/Wisemen/static/media/ava.9f9cc2c3.jpg"
   },
@@ -76,8 +80,64 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/card-bg-1.8faff2d7.jpg"
   },
   {
+    "revision": "34e77a2b2886e66a1a90eb1de097954a",
+    "url": "/Wisemen/static/media/card-bg-10.34e77a2b.jpg"
+  },
+  {
+    "revision": "ec4d6f2dacc6656f31722494340e5b78",
+    "url": "/Wisemen/static/media/card-bg-11.ec4d6f2d.jpg"
+  },
+  {
+    "revision": "1f29ca54c8a686dd372c57d00ea9f706",
+    "url": "/Wisemen/static/media/card-bg-13.1f29ca54.jpg"
+  },
+  {
+    "revision": "598afbc803f89205c9eecff6539b6e95",
+    "url": "/Wisemen/static/media/card-bg-14.598afbc8.jpg"
+  },
+  {
+    "revision": "bf1461629bb85a495ba9bc615a23ce82",
+    "url": "/Wisemen/static/media/card-bg-15.bf146162.jpg"
+  },
+  {
+    "revision": "99e99cfad84c4ab44c9339ee2c791542",
+    "url": "/Wisemen/static/media/card-bg-16.99e99cfa.jpg"
+  },
+  {
+    "revision": "dd468f302ef16d03099d25ab94e2e6a2",
+    "url": "/Wisemen/static/media/card-bg-17.dd468f30.jpg"
+  },
+  {
+    "revision": "fff4af41f17abb58765beb9e5fb669b1",
+    "url": "/Wisemen/static/media/card-bg-18.fff4af41.jpg"
+  },
+  {
+    "revision": "61365450b009c9bbe0f0d8c9526d6541",
+    "url": "/Wisemen/static/media/card-bg-19.61365450.jpg"
+  },
+  {
     "revision": "4be82c7770ca037152a80594ce35c80b",
     "url": "/Wisemen/static/media/card-bg-2.4be82c77.jpg"
+  },
+  {
+    "revision": "70301b600b874df219f9115d6662a2d0",
+    "url": "/Wisemen/static/media/card-bg-20.70301b60.jpg"
+  },
+  {
+    "revision": "5335521f12931d2fd4bc1b0f82e2c432",
+    "url": "/Wisemen/static/media/card-bg-21.5335521f.jpg"
+  },
+  {
+    "revision": "9952e12b0199a421105070df4675ed88",
+    "url": "/Wisemen/static/media/card-bg-22.9952e12b.jpg"
+  },
+  {
+    "revision": "7f0dec3104bf087c9bc5d92a6536fbc3",
+    "url": "/Wisemen/static/media/card-bg-23.7f0dec31.jpg"
+  },
+  {
+    "revision": "e3e04e884c3e698414ce3a62567c8cb2",
+    "url": "/Wisemen/static/media/card-bg-24.e3e04e88.jpg"
   },
   {
     "revision": "6b8522cfd1bde1110aeed78cde09d38d",
@@ -86,6 +146,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7ccdfafd1b129c822a8e9e5784db3646",
     "url": "/Wisemen/static/media/card-bg-4.7ccdfafd.jpg"
+  },
+  {
+    "revision": "c472be1817c6dd0e865fd5224b410052",
+    "url": "/Wisemen/static/media/card-bg-5.c472be18.jpg"
+  },
+  {
+    "revision": "f05812bfbe8ae7e719959e7e37a0debb",
+    "url": "/Wisemen/static/media/card-bg-6.f05812bf.jpg"
+  },
+  {
+    "revision": "9fcdd2b928269c6eb47841c08c7bdc9c",
+    "url": "/Wisemen/static/media/card-bg-7.9fcdd2b9.jpg"
+  },
+  {
+    "revision": "9f3c5e885c150767307595a06b369a87",
+    "url": "/Wisemen/static/media/card-bg-8.9f3c5e88.jpg"
+  },
+  {
+    "revision": "427f4088247470c1c096fb014f9449c5",
+    "url": "/Wisemen/static/media/card-bg-9.427f4088.jpg"
   },
   {
     "revision": "738f9628fe09b887c7bdd680b8c88c3d",
@@ -146,10 +226,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cb23fb2fd0e7b4115b78dceda0565116",
     "url": "/Wisemen/static/media/point-shadow2.cb23fb2f.png"
-  },
-  {
-    "revision": "57be35ffd37d67498f29b24cf55fe3c8",
-    "url": "/Wisemen/static/media/profile-bg-1.57be35ff.png"
   },
   {
     "revision": "32469697aeb519186bd3c8480d1e5e19",
