@@ -3,7 +3,9 @@ import React from "react";
 import styles from "./FindDeck.module.css";
 import UserData from "./user-data/UserData";
 import Sort from './sort/Sort'
-import UserInfo from "../../../common/user/UserInfo";
+import Loader from "../../../common/loader/Loader";
+import {useSelector} from "react-redux";
+import {AppStateType} from "../../../../bll/store/store";
 
 
 
@@ -15,6 +17,8 @@ type UsersDeckType = {
     showMode: string
 }
 
+
+
 const FindDeck: React.FC<UsersDeckType> = ({
                                                users,
                                                sortDeckUp,
@@ -24,16 +28,17 @@ const FindDeck: React.FC<UsersDeckType> = ({
                                            }) => {
     const Headers = [
         {name: 'avatar', title: 'Avatar'},
-        {name: 'nick', title: 'Nick'},
-        {name: 'decks', title: 'Decks'}
-    ]
+        {name: 'name', title: 'Nick'},
+        {name: 'publicCardPacksCount', title: 'Decks'}
+    ];
+    const {isPreventFetching} = useSelector((state: AppStateType) => state.preventRequest)
 
     return (
-        <div>
-            <div className={styles.find_headers__wrap}>
+        <div className={styles.findDeck__wrap}>
+            <div className={styles.findDeck__header}>
                 {
                     Headers.map(h =>
-                        <div key={h.name}>
+                        <div  className={styles.findDeck__item} key={h.name} >
                             <Sort
                                 name={h.name}
                                 title={h.title}
@@ -42,22 +47,29 @@ const FindDeck: React.FC<UsersDeckType> = ({
                         </div>)
                 }
             </div>
-            <div className={styles.user_data__wrap}>
-                {
-                    users.map(u =>
-                        <div className={styles.user__data} key={u._id}>
-                            <UserData
-                                avatar={u.avatar}
-                                name={u.name}
-                                decks={u.publicCardPacksCount}
-                                id={u._id}
-                                onShowDecks={onShowDecks}
-                                showMode={showMode}
-                            />
+            {
+                isPreventFetching &&
+				<div className={styles.findDeck__loader}>
+					<Loader/>
+				</div>
+            }
+            {
+                !isPreventFetching &&
+				<div className={styles.findDeck__users}>
+                    {
+                        users.map(u =>
+                            <UserData key={u._id}
+                                      avatar={u.avatar}
+                                      name={u.name}
+                                      decks={u.publicCardPacksCount}
+                                      id={u._id}
+                                      onShowDecks={onShowDecks}
+                                      showMode={showMode}
+                            />)
 
-                        </div>)
-                }
-            </div>
+                    }
+				</div>
+            }
         </div>
 
     )
