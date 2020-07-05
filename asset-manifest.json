@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.150340d3.chunk.css",
-    "main.js": "/Wisemen/static/js/main.fd29d48a.chunk.js",
-    "main.js.map": "/Wisemen/static/js/main.fd29d48a.chunk.js.map",
+    "main.css": "/Wisemen/static/css/main.a7a442ac.chunk.css",
+    "main.js": "/Wisemen/static/js/main.f9f33f33.chunk.js",
+    "main.js.map": "/Wisemen/static/js/main.f9f33f33.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.f6a3cafd.js",
     "runtime-main.js.map": "/Wisemen/static/js/runtime-main.f6a3cafd.js.map",
-    "static/js/2.1e84c453.chunk.js": "/Wisemen/static/js/2.1e84c453.chunk.js",
-    "static/js/2.1e84c453.chunk.js.map": "/Wisemen/static/js/2.1e84c453.chunk.js.map",
+    "static/js/2.e1d57729.chunk.js": "/Wisemen/static/js/2.e1d57729.chunk.js",
+    "static/js/2.e1d57729.chunk.js.map": "/Wisemen/static/js/2.e1d57729.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.9a19b09c3f43306a28604745c9b4538e.js": "/Wisemen/precache-manifest.9a19b09c3f43306a28604745c9b4538e.js",
+    "precache-manifest.b5ea157dce43f44485cb7d86471d55c8.js": "/Wisemen/precache-manifest.b5ea157dce43f44485cb7d86471d55c8.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.150340d3.chunk.css.map": "/Wisemen/static/css/main.150340d3.chunk.css.map",
-    "static/js/2.1e84c453.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.1e84c453.chunk.js.LICENSE.txt",
+    "static/css/main.a7a442ac.chunk.css.map": "/Wisemen/static/css/main.a7a442ac.chunk.css.map",
+    "static/js/2.e1d57729.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.e1d57729.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Wisemen/static/media/CSGrimrock.bd07c961.woff",
     "static/media/Intro-53-commpres-webm.webm": "/Wisemen/static/media/Intro-53-commpres-webm.f9da5a9c.webm",
     "static/media/Intro-53-commpres.mp4": "/Wisemen/static/media/Intro-53-commpres.7dbea0cc.mp4",
@@ -107,7 +107,8 @@
     "static/media/card-bg-RR.png": "/Wisemen/static/media/card-bg-RR.0044d1d5.png",
     "static/media/clouse-shadow2.png": "/Wisemen/static/media/clouse-shadow2.738f9628.png",
     "static/media/Menu.module.css": "/Wisemen/static/media/cтена-218.72a9f608.png",
-    "static/media/Find.module.css": "/Wisemen/static/media/game-bg1.9faddd42.png",
+    "static/media/decor.png": "/Wisemen/static/media/decor.e19904ec.png",
+    "static/media/Find.module.css": "/Wisemen/static/media/find-bg.9f10fcbd.jpg",
     "static/media/Header.module.css": "/Wisemen/static/media/header-bg-cloud80.c1386685.png",
     "static/media/login-shadow.png": "/Wisemen/static/media/login-shadow.ae8eb5b9.png",
     "static/media/main-bg-video-20.mp4": "/Wisemen/static/media/main-bg-video-20.05dde4ff.mp4",
@@ -126,8 +127,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f6a3cafd.js",
-    "static/js/2.1e84c453.chunk.js",
-    "static/css/main.150340d3.chunk.css",
-    "static/js/main.fd29d48a.chunk.js"
+    "static/js/2.e1d57729.chunk.js",
+    "static/css/main.a7a442ac.chunk.css",
+    "static/js/main.f9f33f33.chunk.js"
   ]
 }
