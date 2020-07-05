@@ -14,12 +14,14 @@ import Card from "./card/Card";
 import CardDownside from "./card/CardDownside";
 import Buttons from "./buttons/Buttons";
 import bg_1  from './../../images/card-bg/card-bg-1.jpg';
+import { useSelector } from "react-redux";
 
 
 const Game = () => {
 
 	const [ cardface , setCardFace ] = useState(true);
 	const [ cardBg , setCardBg ] = useState(bg_1);
+	const {user} = useSelector((state) => state.profile);
 
 	return (
 		<div className={styles.game__wrap}>
@@ -30,10 +32,10 @@ const Game = () => {
 					<div className={styles.content__header}>
 						<div className={styles.header__user}>
 							<div className={styles.user__avatar}>
-								<img src={ava} alt="avatar"/>
+								<img src={user.avatar} alt="avatar"/>
 							</div>
 							<div className={styles.user__nick}>
-								<span>Leat</span>
+								<span>{user.name}</span>
 							</div>
 						</div>
 						<div className={styles.header__info}>
@@ -48,7 +50,7 @@ const Game = () => {
 										</div>
 									</div>
 								</NavLink>
-								<NavLink to={ GAME_PATH_DECK_RED} className={styles.header__link}>
+								<NavLink to={GAME_PATH_DECK_RED} className={styles.header__link}>
 									<div className={`${styles.decks__item} ${styles.decks__item_2}`}>
 										<div className={styles.tooltip}>
 											<div className={styles.tooltip_wrap}>
