@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "37f65fe615337f508fbe2211e7ae8e14",
+    "revision": "bb9f676b0c51e7311b9e9d9e643d45d4",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "08cc9b8409a14c25f5c8",
-    "url": "/Wisemen/static/css/main.a7a442ac.chunk.css"
+    "revision": "e87865b3244f1067178a",
+    "url": "/Wisemen/static/css/main.d5acd6af.chunk.css"
   },
   {
-    "revision": "a6520aa3d4fd9571ff72",
-    "url": "/Wisemen/static/js/2.e1d57729.chunk.js"
+    "revision": "4a58c767fa601c0eca77",
+    "url": "/Wisemen/static/js/2.d092519b.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.e1d57729.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.d092519b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "08cc9b8409a14c25f5c8",
-    "url": "/Wisemen/static/js/main.f9f33f33.chunk.js"
+    "revision": "e87865b3244f1067178a",
+    "url": "/Wisemen/static/js/main.dd33f11d.chunk.js"
   },
   {
     "revision": "4ecfdefd650125f61227",
@@ -70,10 +70,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1daa40531500e0ca3ba71d52c815b02f",
     "url": "/Wisemen/static/media/ava-default.1daa4053.png"
-  },
-  {
-    "revision": "9f9cc2c34b2797bf9e8b4a123e3472f6",
-    "url": "/Wisemen/static/media/ava.9f9cc2c3.jpg"
   },
   {
     "revision": "8faff2d7e956643814ccaf3510909b4e",
@@ -502,5 +498,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "98b111ff52dcc31e2ee27741df9cce87",
     "url": "/Wisemen/static/media/thinking-face.98b111ff.png"
+  },
+  {
+    "revision": "d42b535de9b3a5a87e6115a16bcc5035",
+    "url": "/Wisemen/static/media/unit.d42b535d.jpg"
+  },
+  {
+    "revision": "0510a867225e5588193e96beff21d93d",
+    "url": "/Wisemen/static/media/userDecks-bg.0510a867.png"
   }
 ]);
