@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bb9f676b0c51e7311b9e9d9e643d45d4",
+    "revision": "ffc0926a9dd4ec68ec73f86cbe491006",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "e87865b3244f1067178a",
-    "url": "/Wisemen/static/css/main.d5acd6af.chunk.css"
+    "revision": "4a6a1d802321a9798ba6",
+    "url": "/Wisemen/static/css/main.325b4b8f.chunk.css"
   },
   {
-    "revision": "4a58c767fa601c0eca77",
-    "url": "/Wisemen/static/js/2.d092519b.chunk.js"
+    "revision": "d940db8166669918a72d",
+    "url": "/Wisemen/static/js/2.2ef8850f.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.d092519b.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.2ef8850f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e87865b3244f1067178a",
-    "url": "/Wisemen/static/js/main.dd33f11d.chunk.js"
+    "revision": "4a6a1d802321a9798ba6",
+    "url": "/Wisemen/static/js/main.3ecdeda9.chunk.js"
   },
   {
     "revision": "4ecfdefd650125f61227",
@@ -416,6 +416,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/cтена-218.72a9f608.png"
   },
   {
+    "revision": "df0e783a60ea5eda21cb90131544a346",
+    "url": "/Wisemen/static/media/decks-bg.df0e783a.png"
+  },
+  {
     "revision": "e19904ec4e477b9822919dea2827b725",
     "url": "/Wisemen/static/media/decor.e19904ec.png"
   },
@@ -502,9 +506,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d42b535de9b3a5a87e6115a16bcc5035",
     "url": "/Wisemen/static/media/unit.d42b535d.jpg"
-  },
-  {
-    "revision": "0510a867225e5588193e96beff21d93d",
-    "url": "/Wisemen/static/media/userDecks-bg.0510a867.png"
   }
 ]);
