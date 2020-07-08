@@ -11,14 +11,17 @@ import {getCardPacks} from '../../../features/cardsPacks/bll/cardPacksReducer';
 import DecksQuestions from "./info/decksQuestions/DecksQuestions";
 import DecksNames from './info/decksNames/DecksNames';
 import DecksLogout from "./info/decksLogout/DecksLogout";
+import PopupAuth from '../../common/popUp/popUp_Authorization/PopupAuth';
 
 
 const FindContainer: React.FC = () => {
     const dispatch = useDispatch();
     const {page, pageCount, totalUsersCount, users} = useSelector((state: AppStateType) => state.getUserReducer);
     const {isAuth} = useSelector((state: AppStateType) => state.login);
+    const [ modal, setModal ] = useState (false);
 
     const [showMode, setShowMode] = useState<string>('');
+    const [popupAuth, setPopupAuth] = useState<boolean>(false);
     const [selectUser, setSelectUser] = useState<boolean>(false);
     const [decksQuestions, setDecksQuestions] = useState<boolean>(false);
 
@@ -46,6 +49,16 @@ const FindContainer: React.FC = () => {
 
     const pageCountSize = Math.ceil(totalUsersCount / pageCount);
 
+    useEffect (() => {
+        let timerId = setTimeout (() => {
+            setPopupAuth(true)
+        }, 500)
+
+        return () => {
+            clearTimeout (timerId)
+        }
+    }, []);
+
     return (
         <div className={styles.find__wrap}>
             <div className={styles.find__left}></div>
@@ -60,7 +73,7 @@ const FindContainer: React.FC = () => {
                                 !isAuth &&
 								<div className={styles.find__wrap_mirror}>
 									<div className={styles.find__loader}>
-										<Loader/>
+										{/*<Loader/>*/}
 									</div>
 								</div>
                             }
@@ -88,13 +101,16 @@ const FindContainer: React.FC = () => {
 
                     { !isAuth &&  <DecksLogout/> }
                     {/*{ isAuth && !selectUser && !decksQuestions && <DecksLogout/> }*/}
-                    { isAuth && !selectUser && !decksQuestions && <DecksNames/> }
-                    {/*{ isAuth && !selectUser &&  !decksQuestions && <DecksQuestions/> }*/}
+                    {/*{ isAuth && !selectUser && !decksQuestions && <DecksNames/> }*/}
+                    { isAuth && !selectUser &&  !decksQuestions && <DecksQuestions/> }
 
                 </div>
             </div>
-
             <div className={styles.find__right}></div>
+            {
+                !isAuth && popupAuth && <PopupAuth setPopupAuth={setPopupAuth}
+												   modal={modal} setModal={setModal}/>
+            }
         </div>)
 }
 
