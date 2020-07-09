@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styles from './PopupAuth.module.css';
 import bell from '../../../icons/bell.png';
 import { useHistory } from "react-router";
-import scrollBg from '../../../images/scroll.webp';
 import closeIcon from '../../../icons/cancel.png';
+import { NavLink } from "react-router-dom";
+import { REDIRECT_PATH } from "../../../components/routes/FormRoutes";
 
 const PopupAuth = ({setPopupAuth, setModal, modal}) => {
 
@@ -44,8 +45,9 @@ const PopupAuth = ({setPopupAuth, setModal, modal}) => {
 						<div className={styles.note__text}>Do you want to log in now?</div>
 						</div>
 						<div className={styles.note__buttons}>
-							<button className={styles.note__button}>yes</button>
-							<button className={styles.note__button}>no</button>
+							<NavLink to={REDIRECT_PATH}>
+								<button className={styles.note__button}>authorization</button>
+							</NavLink>
 						</div>
 					</div>
 					<div className={styles.popupAuth__icon}>
