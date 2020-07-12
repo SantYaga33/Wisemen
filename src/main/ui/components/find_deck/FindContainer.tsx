@@ -165,11 +165,11 @@ const FindContainer: React.FC = () => {
                     {!isAuth && <DecksLogout/>}
                     {isAuth && !selectUser && !decksQuestions && <DecksLogout/>}
                     {isAuth && selectUser && !decksQuestions && <DecksNames
-						nameUser={nameUser} onSelectDeck={onSelectDeck} deckscount={deckscount}
-						isLocalFetching={isLocalFetching}/>}
+						nameUser={nameUser} onSelectDeck={onSelectDeck} deckscount={deckscount}/>}
                     {isAuth && selectUser && decksQuestions && <DecksQuestions
 						cardPackName={cardPackName} cards={cards} SaveToFavoriteDecks={SaveToFavoriteDecks}
-						popupSaveToDeckOk={popupSaveToDeckOk} setPopupSaveToDeckOk={setPopupSaveToDeckOk}/>}
+						popupSaveToDeckOk={popupSaveToDeckOk} setPopupSaveToDeckOk={setPopupSaveToDeckOk}
+						setDecksQuestions={setDecksQuestions}/>}
 
                 </div>
             </div>

@@ -1,6 +1,5 @@
 
 .container__rightBlock {
-    position: relative;
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -101,19 +100,6 @@
 
 }
 
-.deckInfo__loader {
-    width: 100%;
-    min-height: 280px;
-    max-height: 280px;
-    overflow: hidden;
-    overflow-y: auto;
-    display: flex;
-    border: 1px solid transparent;
-    flex-direction: column;
-    margin-bottom: 10px;
-    position: relative;
-}
-
 .data__item_box {
     width: 100%;
     min-height: 280px;
@@ -134,7 +120,7 @@
     display: flex;
     width: 100%;
     height: 65px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border: 1px solid transparent;
 }
@@ -155,7 +141,6 @@
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     transition: color, background-color;
-    cursor: pointer;
 }
 
 .deckInfo__button:hover {
