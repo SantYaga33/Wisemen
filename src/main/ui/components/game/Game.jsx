@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Game.module.css';
+import gif from '../../video/анимация-путник-с-фоном.gif';
+import gif1 from '../../video/1.gif';
+import gif2 from '../../video/2.gif';
 import DecksRoutes, {
 	GAME_PATH_DECK_BLUE,
 	GAME_PATH_DECK_GREEN,
@@ -15,6 +18,9 @@ import Buttons from "./buttons/Buttons";
 import bg_1 from './../../images/card-bg/card-bg-1.jpg';
 import { useSelector } from "react-redux";
 import avaDefault from "../../images/ava-default.png";
+import soundDeck from "../../audio/deck.mp3";
+import soundCard from "../../audio/card.mp3";
+import { loudlinks } from "../../../helpers/loudlinks";
 
 
 const Game = () => {
@@ -24,11 +30,19 @@ const Game = () => {
 	const { user } = useSelector ((state) => state.profile);
 	const { userFavoriteDecks } = useSelector ((state) => state.favoriteDecks);
 
+	useEffect (() => {
+		loudlinks ();
+	}, []);
+
 	return (
 		<div className={styles.game__wrap}>
 			<div className={styles.game__left}></div>
 			<div className={styles.game__container}>
-				<div className={styles.game__analytics}>analytics</div>
+				<div className={styles.game__analytics}>analytics
+					<img src={gif} alt=""/>
+					<img src={gif1} alt=""/>
+					<img src={gif2} alt=""/>
+				</div>
 				<div className={styles.game__content}>
 					<div className={styles.content__header}>
 						<div className={styles.header__user}>
@@ -49,7 +63,7 @@ const Game = () => {
 								}
 								{
 									!user.name &&
-									<span>john wick</span>
+									<span>John Wick</span>
 								}
 							</div>
 						</div>
@@ -121,8 +135,12 @@ const Game = () => {
 								<Buttons setCardFace={setCardFace} cardface={cardface} setCardBg={setCardBg}/>
 							</div>
 						</div>
-						<div className={styles.main__deck}>
-							<DecksRoutes setCardBg={setCardBg}/>
+						<div className='soundClick' data-sound={soundCard}>
+							<div className='soundHover' data-sound={soundDeck}>
+								<div className={`${styles.main__deck}`}>
+									<DecksRoutes setCardBg={setCardBg}/>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
