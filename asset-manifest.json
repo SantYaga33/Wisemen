@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.10fc2879.chunk.css",
+    "main.css": "/Wisemen/static/css/main.07aaeeea.chunk.css",
     "main.js": "/Wisemen/static/js/main.ab111efe.chunk.js",
     "main.js.map": "/Wisemen/static/js/main.ab111efe.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.f6a3cafd.js",
@@ -8,9 +8,9 @@
     "static/js/2.c9b414cd.chunk.js": "/Wisemen/static/js/2.c9b414cd.chunk.js",
     "static/js/2.c9b414cd.chunk.js.map": "/Wisemen/static/js/2.c9b414cd.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.3f605c04941c04a33524797032c1eacc.js": "/Wisemen/precache-manifest.3f605c04941c04a33524797032c1eacc.js",
+    "precache-manifest.a2ca1862c6b410c06d00e7aa1c99bff4.js": "/Wisemen/precache-manifest.a2ca1862c6b410c06d00e7aa1c99bff4.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.10fc2879.chunk.css.map": "/Wisemen/static/css/main.10fc2879.chunk.css.map",
+    "static/css/main.07aaeeea.chunk.css.map": "/Wisemen/static/css/main.07aaeeea.chunk.css.map",
     "static/js/2.c9b414cd.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.c9b414cd.chunk.js.LICENSE.txt",
     "static/media/1.gif": "/Wisemen/static/media/1.ff6785d8.gif",
     "static/media/2.gif": "/Wisemen/static/media/2.6d3c6b9e.gif",
@@ -136,7 +136,7 @@
   "entrypoints": [
     "static/js/runtime-main.f6a3cafd.js",
     "static/js/2.c9b414cd.chunk.js",
-    "static/css/main.10fc2879.chunk.css",
+    "static/css/main.07aaeeea.chunk.css",
     "static/js/main.ab111efe.chunk.js"
   ]
 }
