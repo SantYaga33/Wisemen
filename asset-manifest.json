@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.41e9273c.chunk.css",
-    "main.js": "/Wisemen/static/js/main.fde9468a.chunk.js",
-    "main.js.map": "/Wisemen/static/js/main.fde9468a.chunk.js.map",
+    "main.css": "/Wisemen/static/css/main.10fc2879.chunk.css",
+    "main.js": "/Wisemen/static/js/main.ab111efe.chunk.js",
+    "main.js.map": "/Wisemen/static/js/main.ab111efe.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.f6a3cafd.js",
     "runtime-main.js.map": "/Wisemen/static/js/runtime-main.f6a3cafd.js.map",
-    "static/js/2.4863f2a1.chunk.js": "/Wisemen/static/js/2.4863f2a1.chunk.js",
-    "static/js/2.4863f2a1.chunk.js.map": "/Wisemen/static/js/2.4863f2a1.chunk.js.map",
+    "static/js/2.c9b414cd.chunk.js": "/Wisemen/static/js/2.c9b414cd.chunk.js",
+    "static/js/2.c9b414cd.chunk.js.map": "/Wisemen/static/js/2.c9b414cd.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.2a5a90cda8c6ac8bae46c9652bd32022.js": "/Wisemen/precache-manifest.2a5a90cda8c6ac8bae46c9652bd32022.js",
+    "precache-manifest.3f605c04941c04a33524797032c1eacc.js": "/Wisemen/precache-manifest.3f605c04941c04a33524797032c1eacc.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.41e9273c.chunk.css.map": "/Wisemen/static/css/main.41e9273c.chunk.css.map",
-    "static/js/2.4863f2a1.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.4863f2a1.chunk.js.LICENSE.txt",
+    "static/css/main.10fc2879.chunk.css.map": "/Wisemen/static/css/main.10fc2879.chunk.css.map",
+    "static/js/2.c9b414cd.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.c9b414cd.chunk.js.LICENSE.txt",
     "static/media/1.gif": "/Wisemen/static/media/1.ff6785d8.gif",
     "static/media/2.gif": "/Wisemen/static/media/2.6d3c6b9e.gif",
     "static/media/index.css": "/Wisemen/static/media/CSGrimrock.bd07c961.woff",
@@ -101,6 +101,7 @@
     "static/media/card-bg-BR.png": "/Wisemen/static/media/card-bg-BR.37bb2c59.png",
     "static/media/Game.module.css": "/Wisemen/static/media/game-bg-2.e9e6fdd1.jpg",
     "static/media/card-bg-GR.png": "/Wisemen/static/media/card-bg-GR.250e5b17.png",
+    "static/media/card-bg-LBR.jpg": "/Wisemen/static/media/card-bg-LBR.d4064502.jpg",
     "static/media/card-bg-LR.png": "/Wisemen/static/media/card-bg-LR.89cb1da0.png",
     "static/media/card-bg-OR.png": "/Wisemen/static/media/card-bg-OR.da794abf.png",
     "static/media/card-bg-PR.png": "/Wisemen/static/media/card-bg-PR.71e159dd.png",
@@ -134,8 +135,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f6a3cafd.js",
-    "static/js/2.4863f2a1.chunk.js",
-    "static/css/main.41e9273c.chunk.css",
-    "static/js/main.fde9468a.chunk.js"
+    "static/js/2.c9b414cd.chunk.js",
+    "static/css/main.10fc2879.chunk.css",
+    "static/js/main.ab111efe.chunk.js"
   ]
 }
