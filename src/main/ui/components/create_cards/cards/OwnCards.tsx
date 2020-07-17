@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './OwnCards.module.css';
 import {CardType} from "../../../../types/entities";
 import EmptyDeck from "../../find_deck/info/emptyDeck/EmptyDeck";
@@ -22,6 +22,16 @@ const OwnCards: React.FC<PropsType> = React.memo(({
                                                       currentCardId,
                                                   }) => {
 
+    useEffect(() => {
+        const currentCardElement = document.getElementById('currentCardId');
+        if(isEditCardMode && currentCardElement) {
+            currentCardElement.classList.add(styles.data__item_active);
+        }
+
+
+    }, []);
+
+
     return (
         <div className={styles.container__rightBlock}>
             <div className={styles.deckInfo__wrap}>
@@ -37,31 +47,30 @@ const OwnCards: React.FC<PropsType> = React.memo(({
                         {cards.length === 0 ? <EmptyDeck/> :
 
                             (cards.map(cards =>
-                                <div key={cards._id} className={styles.data__item}>
+                                <div key={cards._id} className={styles.data__item} >
                                     <div className={styles.item__question}>{cards.question}</div>
                                     <div className={styles.data__border}></div>
                                     <div className={styles.item__answer}>{cards.answer}</div>
+                                    <div className={styles.data__border}></div>
+                                    <div className={styles.data__buttons}>
+                                        {isEditCardMode && cards._id === currentCardId &&
+										<button className={styles.data__button} onClick={onCancelEditCardClick}>
+											cancel
+										</button>}
 
-                                    {isEditCardMode && cards._id === currentCardId &&
-                                    <button onClick={onCancelEditCardClick}>
-                                        cancel
-                                    </button>}
-
-                                    {(isEditCardMode && cards._id !== currentCardId || !isEditCardMode) &&
-                                    <button
-                                        id={cards._id}
-                                        onClick={onEditCardClick}
-                                    >
-                                        edit
-                                    </button>}
+                                        {(isEditCardMode && cards._id !== currentCardId || !isEditCardMode) &&
+										<button className={styles.data__button}
+												id={cards._id}
+												onClick={onEditCardClick}
+										>
+											edit
+										</button>}
+                                        <button className={styles.data__button}>delete</button>
+                                    </div>
                                 </div>
                             ))
                         }
                     </div>
-                    {/*<div className={styles.deckInfo__button_wrap}>
-                        <button className={styles.deckInfo__button}>save to favorites</button>
-                    </div>*/}
-
                 </div>
             </div>
         </div>
