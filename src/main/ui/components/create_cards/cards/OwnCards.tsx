@@ -9,7 +9,7 @@ type PropsType = {
     onEditCardClick: (e: React.MouseEvent<HTMLButtonElement>) => void
     isEditCardMode: boolean
     onCancelEditCardClick: () => void
-    currentCardId: string
+    selectedCardId: string
 }
 
 
@@ -19,18 +19,17 @@ const OwnCards: React.FC<PropsType> = React.memo(({
                                                       onEditCardClick,
                                                       isEditCardMode,
                                                       onCancelEditCardClick,
-                                                      currentCardId,
+                                                      selectedCardId,
                                                   }) => {
 
     useEffect(() => {
-        const currentCardElement = document.getElementById('currentCardId');
+        const currentCardElement = document.getElementById(selectedCardId + 1);
         if(isEditCardMode && currentCardElement) {
-            currentCardElement.classList.add(styles.data__item_active);
+            currentCardElement.style.backgroundColor = 'darkblue';
+        } else if (!isEditCardMode && currentCardElement) {
+            currentCardElement.style.backgroundColor = 'transparent';
         }
-
-
-    }, []);
-
+    }, [selectedCardId, isEditCardMode]);
 
     return (
         <div className={styles.container__rightBlock}>
@@ -45,20 +44,19 @@ const OwnCards: React.FC<PropsType> = React.memo(({
                     </div>
                     <div className={styles.data__item_box}>
                         {cards.length === 0 ? <EmptyDeck/> :
-
                             (cards.map(cards =>
-                                <div key={cards._id} className={styles.data__item} >
+                                <div key={cards._id} className={styles.data__item} id={cards._id + 1}>
                                     <div className={styles.item__question}>{cards.question}</div>
                                     <div className={styles.data__border}></div>
                                     <div className={styles.item__answer}>{cards.answer}</div>
                                     <div className={styles.data__border}></div>
                                     <div className={styles.data__buttons}>
-                                        {isEditCardMode && cards._id === currentCardId &&
+                                        {isEditCardMode && cards._id === selectedCardId &&
 										<button className={styles.data__button} onClick={onCancelEditCardClick}>
 											cancel
 										</button>}
 
-                                        {(isEditCardMode && cards._id !== currentCardId || !isEditCardMode) &&
+                                        {(isEditCardMode && cards._id !== selectedCardId || !isEditCardMode) &&
 										<button className={styles.data__button}
 												id={cards._id}
 												onClick={onEditCardClick}

@@ -1,44 +1,56 @@
-.game__wrap {
+.container__rightBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'CS Grimrock', sans-serif;
-
-    /*background: url("../../images/game-bg.png");*/
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
-
+    margin: 50px 0px;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
 }
-.game__test {
-    width: 600px;
-    height: 400px;
-    /*background-color: #000;*/
+
+.cardsLogout__wrap {
+    width: 500px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardsLogout__text {
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
+    font-size: 18px;
     font-weight: bold;
     color: transparent;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
+}
 
-    margin-left: 50px;
+.cardsLogout__img {
+    opacity: 1;
+    width: 100px;
+    transition: opacity 2.5s ease;
+}
+
+.cardsLogout__img_active {
+    opacity: 0;
+    transition: opacity 2.5s ease;
 }
 
 /*=============*/
 span {
     display: inline-block;
     text-shadow: 0 0 0 whitesmoke;
-
 }
 .span_active {
-    -webkit-animation: smoky 5s ;
-    animation: smoky 5s ;
+    -webkit-animation: smoky 3s ;
+    animation: smoky 3s forwards;
 }
 .span_active span:nth-child(even) {
     -webkit-animation-name: smoky-mirror;
@@ -193,4 +205,33 @@ span:nth-of-type(20) {
 span:nth-of-type(21) {
     -webkit-animation-delay: 2.1s;
     animation-delay: 2.1s;
+}
+span:nth-of-type(22) {
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+
+span:nth-of-type(23) {
+    -webkit-animation-delay: 2.3s;
+    animation-delay: 2.3s;
+}
+
+span:nth-of-type(24) {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+span:nth-of-type(25) {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+span:nth-of-type(26) {
+    -webkit-animation-delay: 2.6s;
+    animation-delay: 2.6s;
+}
+
+span:nth-of-type(27) {
+    -webkit-animation-delay: 2.7s;
+    animation-delay: 2.7s;
 }

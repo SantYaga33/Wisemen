@@ -3,8 +3,10 @@ import {useForm} from "react-hook-form";
 import {CardType} from "../../../../types/entities";
 import {useDispatch} from "react-redux";
 import {add_Card, delete_Card, update_Card} from "../../../../features/Cards/bll/cardsReducer";
-import Textarea from "../../../common/textarea/Textarea";
-import Button from "../../../common/Button/Button";
+import * as yup from "yup";
+import CreateCardTextarea from "../../../common/createCardTextarea/CreateCardTextarea";
+import styles from "./MultiAnswerCardForm.module.css";
+import CreateCardButton from "../../../common/CreateCardButton/CreateCardButton";
 
 
 type AlternativeFormType = {
@@ -16,22 +18,30 @@ type AlternativeFormType = {
 
 type PropsType = {
     isEditCardMode: boolean
-    currentCardData: CardType | undefined  // will another type with 3 answers
+    selectedCard: CardType | undefined  // will another type with 3 answers
     setIsEditCardMode: React.Dispatch<React.SetStateAction<boolean>>
     cardsPack_id: string
 }
 
-const AlternativeForm: React.FC<PropsType> = React.memo(({
+const MultiAnswerCardForm: React.FC<PropsType> = React.memo(({
                                                           isEditCardMode,
-                                                          currentCardData,
+                                                                 selectedCard,
                                                           setIsEditCardMode,
                                                           cardsPack_id,
                                                       }) => {
 
     const dispatch = useDispatch();
 
+    const schema = yup.object().shape({
+        question: yup.string().required('⚠ please, fill up question'),
+        answerRight: yup.string().required('⚠ please, fill up right answer'),
+        answerFirstVariant: yup.string().required('⚠ please, fill up first variant'),
+        answerSecondVariant: yup.string().required('⚠ please, fill up second variant'),
+    });
+
     const {register, handleSubmit, errors, reset, setValue, watch} = useForm<AlternativeFormType>({
         mode: 'onBlur',
+        validationSchema: schema
     });
 
     /*useEffect(() => {
@@ -44,13 +54,6 @@ const AlternativeForm: React.FC<PropsType> = React.memo(({
         }
     }, [isEditCardMode, currentCardData?.question, currentCardData?.answer]);*/
 
-    const getIsEmptyFields = () => {
-        return !watch().answerRight
-            && !watch().answerFirstVariant
-            && !watch().answerSecondVariant
-            && !watch().question;
-    };
-
 
     const onSubmit = handleSubmit((data) => {
 
@@ -59,40 +62,39 @@ const AlternativeForm: React.FC<PropsType> = React.memo(({
     });
 
     return (
-        <form onSubmit={onSubmit}>
-
-            <Textarea
+        <div className={styles.cardform__wrap}>
+        <form className={styles.form} onSubmit={onSubmit}>
+            <div className={styles.formtextarea__wrap}>
+            <CreateCardTextarea
                 register={register}
                 name='question'
                 errors={errors}
                 placeholder='Enter your question'
             />
-            <Textarea
+            <CreateCardTextarea
                 register={register}
                 name='answerRight'
                 errors={errors}
                 placeholder='Enter right your answer'
             />
-
-            <Textarea
+            <CreateCardTextarea
                 register={register}
                 name='answerFirstVariant'
                 errors={errors}
                 placeholder='Enter first variant of answer'
             />
-
-            <Textarea
+            <CreateCardTextarea
                 register={register}
                 name='answerSecondVariant'
                 errors={errors}
                 placeholder='Enter second variant of answer'
             />
-
-            <div>
-                <Button/>
             </div>
-
+            <div className={styles.formbuttons__wrap}>
+                <CreateCardButton/>
+            </div>
         </form>
+        </div>
     )
 });
-export default AlternativeForm;
+export default MultiAnswerCardForm;
