@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo} from 'react';
 import {useForm} from "react-hook-form";
 import {CardType} from "../../../../types/entities";
 import {useDispatch} from "react-redux";
@@ -7,6 +7,11 @@ import styles from "./CardForm.module.css";
 import CreateCardTextarea from "../../../common/createCardTextarea/CreateCardTextarea";
 import * as yup from "yup";
 import CreateCardButton from "../../../common/CreateCardButton/CreateCardButton";
+import {getRestLimit} from "../../../../helpers/restLimit/restLimit";
+import {
+    addCurrentUserCard,
+    updateCurrentUserCard
+} from "../../../../bll/currentUserCardsReducer/currentUserCardsReducer";
 
 
 type CardFormType = {
@@ -19,7 +24,6 @@ type PropsType = {
     selectedCard: CardType | undefined
     setIsEditCardMode: React.Dispatch<React.SetStateAction<boolean>>
     cardsPack_id: string
-    onDeleteDeck: () => void
 }
 
 const CardForm: React.FC<PropsType> = React.memo(({
@@ -27,18 +31,32 @@ const CardForm: React.FC<PropsType> = React.memo(({
                                                       selectedCard,
                                                       setIsEditCardMode,
                                                       cardsPack_id,
-                                                      onDeleteDeck,
+
                                                   }) => {
 
     const dispatch = useDispatch();
+    const questionMaxLength = 220;
+    const answerMaxLength = 190;
+
     const schema = yup.object().shape({
-        question: yup.string().required('⚠ please, fill up question'),
-        answer: yup.string().required('⚠ please, fill up answer'),
+        question: yup.string().required('⚠ please, fill up question')
+            .max(questionMaxLength, `Limit ${questionMaxLength}`),
+        answer: yup.string().required('⚠ please, fill up answer')
+            .max(answerMaxLength, `Limit ${questionMaxLength}`),
     });
+
     const {register, handleSubmit, errors, reset, setValue, watch} = useForm<CardFormType>({
-        mode: 'onBlur',
+        mode: 'onChange',
         validationSchema: schema
     });
+
+    const questionRestLimit = useMemo(() => {
+        return getRestLimit(questionMaxLength, watch().question)
+    }, [questionMaxLength, watch().question]);
+
+    const answerRestLimit = useMemo(() => {
+        return getRestLimit(answerMaxLength, watch().answer)
+    }, [answerMaxLength, watch().answer]);
 
     useEffect(() => {
         if (isEditCardMode && selectedCard) {
@@ -57,13 +75,13 @@ const CardForm: React.FC<PropsType> = React.memo(({
             if (selectedCard) { // to prevent undefined
                 const {_id} = selectedCard;
 
-                dispatch(update_Card({_id, question: data.question, answer: data.answer}));
+                dispatch(updateCurrentUserCard({_id, question: data.question, answer: data.answer}));
                 setIsEditCardMode(false);
             }
         }
 
         if (!isEditCardMode) {
-            dispatch(add_Card({cardsPack_id, question: data.question, answer: data.answer}));
+            dispatch(addCurrentUserCard({cardsPack_id, question: data.question, answer: data.answer}));
         }
 
         reset();
@@ -71,8 +89,6 @@ const CardForm: React.FC<PropsType> = React.memo(({
 
     return (
         <div className={styles.cardform__wrap}>
-            {/*<button onClick={onDeleteDeck}>del pack</button>  /!*temp for del packs*!/*/}
-
             <form className={styles.form} onSubmit={onSubmit}>
                 <div className={styles.formtextarea__wrap}>
                     <CreateCardTextarea
@@ -80,20 +96,22 @@ const CardForm: React.FC<PropsType> = React.memo(({
                         name='question'
                         errors={errors}
                         placeholder='enter your question'
+                        restLimit={questionRestLimit}
                     />
                     <CreateCardTextarea
                         register={register}
                         name='answer'
                         errors={errors}
                         placeholder='enter your answer'
+                        restLimit={answerRestLimit}
                     />
                 </div>
                 <div className={styles.formbuttons__wrap}>
                     {isEditCardMode &&
-					<CreateCardButton className={styles.form__button}>Change</CreateCardButton>}
+                    <CreateCardButton className={styles.form__button}>Change</CreateCardButton>}
 
                     {!isEditCardMode &&
-					<CreateCardButton className={styles.form__button}>Create</CreateCardButton>}
+                    <CreateCardButton className={styles.form__button}>Create</CreateCardButton>}
                 </div>
             </form>
         </div>
