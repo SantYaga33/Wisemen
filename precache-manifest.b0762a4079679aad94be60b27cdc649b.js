@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb0becf1521195db247c737318abe523",
+    "revision": "ee17eabc746a68c6db0b19807f3c9efb",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "5d0ba525de8b81b4dcc5",
-    "url": "/Wisemen/static/css/main.fe0e513c.chunk.css"
+    "revision": "b9d0aaee133eea60dd89",
+    "url": "/Wisemen/static/css/main.99001379.chunk.css"
   },
   {
     "revision": "33f51e951001e85e8b29",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/js/2.1eb52060.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d0ba525de8b81b4dcc5",
+    "revision": "b9d0aaee133eea60dd89",
     "url": "/Wisemen/static/js/main.15c07d73.chunk.js"
   },
   {
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6d3c6b9ecbd4cc4ddbdc7d5f7970f916",
     "url": "/Wisemen/static/media/2.6d3c6b9e.gif"
+  },
+  {
+    "revision": "97bf8fb49e0dde37ad540fe106d54b59",
+    "url": "/Wisemen/static/media/3.97bf8fb4.png"
   },
   {
     "revision": "106a1379dae3231365ac7d6269374f26",
@@ -498,10 +502,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cd59e4a28bc5ae20027e52df5649efe5",
     "url": "/Wisemen/static/media/newIntro.cd59e4a2.mp4"
-  },
-  {
-    "revision": "d04b936db600a3db16cd3c54bcaf98af",
-    "url": "/Wisemen/static/media/plug-bg2.d04b936d.png"
   },
   {
     "revision": "cb23fb2fd0e7b4115b78dceda0565116",
