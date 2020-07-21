@@ -1,17 +1,17 @@
 import React, {useEffect, useMemo} from 'react';
 import {useForm} from "react-hook-form";
-import {CardType} from "../../../../types/entities";
+import {CardType} from "../../../../../types/entities";
 import {useDispatch} from "react-redux";
-import {add_Card, delete_Card, update_Card} from "../../../../features/Cards/bll/cardsReducer";
+import {add_Card, delete_Card, update_Card} from "../../../../../features/Cards/bll/cardsReducer";
 import styles from "./CardForm.module.css";
-import CreateCardTextarea from "../../../common/createCardTextarea/CreateCardTextarea";
+import CreateCardTextarea from "../../../../common/createCardTextarea/CreateCardTextarea";
 import * as yup from "yup";
-import CreateCardButton from "../../../common/CreateCardButton/CreateCardButton";
-import {getRestLimit} from "../../../../helpers/restLimit/restLimit";
+import CreateCardButton from "../../../../common/CreateCardButton/CreateCardButton";
+import {getRestLimit} from "../../../../../helpers/restLimit/restLimit";
 import {
     addCurrentUserCard,
     updateCurrentUserCard
-} from "../../../../bll/currentUserCardsReducer/currentUserCardsReducer";
+} from "../../../../../bll/currentUserCardsReducer/currentUserCardsReducer";
 
 
 type CardFormType = {
@@ -24,6 +24,7 @@ type PropsType = {
     selectedCard: CardType | undefined
     setIsEditCardMode: React.Dispatch<React.SetStateAction<boolean>>
     cardsPack_id: string
+    isPreventFetching:boolean
 }
 
 const CardForm: React.FC<PropsType> = React.memo(({
@@ -31,7 +32,7 @@ const CardForm: React.FC<PropsType> = React.memo(({
                                                       selectedCard,
                                                       setIsEditCardMode,
                                                       cardsPack_id,
-
+                                                      isPreventFetching,
                                                   }) => {
 
     const dispatch = useDispatch();
@@ -108,10 +109,20 @@ const CardForm: React.FC<PropsType> = React.memo(({
                 </div>
                 <div className={styles.formbuttons__wrap}>
                     {isEditCardMode &&
-                    <CreateCardButton className={styles.form__button}>Change</CreateCardButton>}
+                    <CreateCardButton
+                        disabled={isPreventFetching}
+                        className={styles.form__button}
+                    >
+                        Change
+                    </CreateCardButton>}
 
                     {!isEditCardMode &&
-                    <CreateCardButton className={styles.form__button}>Create</CreateCardButton>}
+                    <CreateCardButton
+                        disabled={isPreventFetching}
+                        className={styles.form__button}
+                    >
+                        Create
+                    </CreateCardButton>}
                 </div>
             </form>
         </div>

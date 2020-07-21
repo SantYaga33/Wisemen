@@ -15,6 +15,8 @@ const initialState = {
     cardsTotalCount: 0,
     cardPackName: '',
     cardsPack_id: '',
+    isEffect: false,
+    isStartMode: true,
 };
 
 type initialStateType = typeof initialState;
@@ -82,7 +84,19 @@ export const currentUserCardsReducer = (state: initialStateType = initialState, 
         case "CURRENT_USER_CARDS_REDUCER/SET_IS_FETCHING":
             return {
                 ...state,
-                  isCardsFetching: action.isFetching
+                isCardsFetching: action.isFetching
+            };
+
+        case "CURRENT_USER_CARDS_REDUCER/SET_IS_EFFECT":
+            return {
+                ...state,
+                isEffect: action.isEffect
+            };
+
+        case "CURRENT_USER_CARDS_REDUCER/SET_IS_START_MODE":
+            return {
+                ...state,
+                isStartMode: action.isStartMode
             };
 
         default:
@@ -131,6 +145,16 @@ export const currentUserCardsActions = {
         isFetching
     } as const),
 
+    setIsEffect: (isEffect: boolean) => ({
+        type: 'CURRENT_USER_CARDS_REDUCER/SET_IS_EFFECT',
+        isEffect
+    } as const),
+
+    setIsStartMode: (isStartMode: boolean) => ({
+        type: 'CURRENT_USER_CARDS_REDUCER/SET_IS_START_MODE',
+        isStartMode
+    } as const),
+
 };
 
 type ActionsType = InferActionTypes<typeof currentUserCardsActions>
@@ -140,13 +164,12 @@ type DispatchType = ThunkDispatch<AppStateType, unknown, ActionsType>
 
 export const getCurrentUserCards = (
     cardsPack_id: string, cardPackName: string | null, sortCards = `question`, direction = '0'): ThunkType =>
-    async (dispatch: DispatchType) => {
+    async (dispatch: DispatchType, getState: () => AppStateType) => {
         try {
             dispatch(setIsPreventFetching(true));
             dispatch(currentUserCardsActions.setIsFetching(true));
             let token = repository.getToken();
             const res = await cardsApi.getCards(cardsPack_id, token, direction + sortCards);
-
             dispatch(currentUserCardsActions.setCards(
                 res.data.cards,
                 cardPackName ? cardPackName : '', // to prevent set null to state
@@ -154,6 +177,11 @@ export const getCurrentUserCards = (
             ));
             dispatch(currentUserCardsActions.set_Success(true));
             repository.saveToken(res.data.token, res.data.tokenDeathTime);
+
+            if(getState().currentUserCards.isStartMode) {
+                dispatch(currentUserCardsActions.setIsStartMode(false));
+            }
+
             dispatch(currentUserCardsActions.setIsFetching(false));
             dispatch(setIsPreventFetching(false));
 

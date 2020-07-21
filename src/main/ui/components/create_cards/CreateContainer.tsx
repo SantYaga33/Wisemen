@@ -6,9 +6,9 @@ import OwnCards from "./cards/OwnCards";
 import {AppStateType} from "../../../bll/store/store";
 import {cardsActions, delete_Card} from "../../../features/Cards/bll/cardsReducer";
 import DefaultDeck from "./defaultDeck/DefaultDeck";
-import CardForm from "./cardForm/CardForm";
-import MultiAnswerCardForm from "./multiAnswerCardForm/MultiAnswerCardForm";
-import CreateDeckForm from "./createDeckForm/CreateDeckForm";
+import CardForm from "./forms/cardForm/CardForm";
+import MultiAnswerCardForm from "./forms/multiAnswerCardForm/MultiAnswerCardForm";
+import CreateDeckForm from "./forms/createDeckForm/CreateDeckForm";
 import {deleteDeck} from '../../../bll/currentUserDecks/currentUserDecksReducer';
 import OwnCardsLogout from './cards/ownCardsLogout/OwnCardsLogout';
 import PopupAuth from "../../common/popUp/popUp_Authorization/PopupAuth";
@@ -18,19 +18,25 @@ import {
     currentUserCardsActions,
     deleteCurrentUserCard
 } from "../../../bll/currentUserCardsReducer/currentUserCardsReducer";
+import Loader from "../../common/loader/Loader";
+import Forms from "./forms/Forms";
+import Plug from "./plug/Plug";
+import PopupDeleteDeck from "./popUp/PopupDeleteDeck";
 
 
 const CreateContainer = () => {
 
     const dispatch = useDispatch();
-    const [effect, setEffect] = useState(false);
-    const [ownCards, setShowOwnCards] = useState(false);
     const {
         cards,
         cardPackName,
         cardsPack_id,
-        isSuccess
+        isSuccess,
+        isCardsFetching,
+        isEffect,
+        isStartMode
     } = useSelector((state: AppStateType) => state.currentUserCards);
+    const {isPreventFetching} = useSelector((state: AppStateType) => state.preventRequest);
     const [selectUser, setSelectUser] = useState<boolean>(false);  //doesnt use yet
     const [decksQuestions, setDecksQuestions] = useState<boolean>(false);  //doesnt use yet
     const [isEditCardMode, setIsEditCardMode] = useState<boolean>(false);
@@ -39,6 +45,8 @@ const CreateContainer = () => {
     const [popupAuth, setPopupAuth] = useState<boolean>(false);
     const {isAuth, userId} = useSelector((state: AppStateType) => state.login);
     const [modal, setModal] = useState(false);
+    const [popupDeleteDeck, setPopupDeleteDeck] = useState(false);
+    const [ownCards, setShowOwnCards] = useState(isSuccess);
     const currentLocation = useLocation<string>();
     let currentPath = currentLocation.pathname;
 
@@ -59,8 +67,9 @@ const CreateContainer = () => {
         setIsEditCardMode(false);
     }, []);
 
-    const onExitEditCardMode = useCallback(() => {
-        dispatch(currentUserCardsActions.set_Success(false));
+    const onCreateDeckClick = useCallback(() => {
+            dispatch(currentUserCardsActions.set_Success(false));
+            dispatch(currentUserCardsActions.setIsStartMode(false));
     }, []);
 
     const onIsMultiDeckChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -70,6 +79,7 @@ const CreateContainer = () => {
     const onDeleteDeck = useCallback(() => {
         dispatch(deleteDeck(cardsPack_id));
         dispatch(currentUserCardsActions.set_Success(false));
+        setPopupDeleteDeck (false);
     }, [cardsPack_id]);
 
     const onDeleteCard = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
@@ -78,18 +88,17 @@ const CreateContainer = () => {
     }, []);
 
     useEffect(() => {
-        if (isSuccess && !effect) {
-            setEffect(true);
+        if (isSuccess && !isEffect) {
+            dispatch(currentUserCardsActions.setIsEffect(true));
             setTimeout(() => {
                 setShowOwnCards(true);
-
             }, 4000);
         }
-        if (!isSuccess) {
+        if (!isSuccess && isEffect) {
             setShowOwnCards(false);
-            setEffect(false);
+            dispatch(currentUserCardsActions.setIsEffect(false));
         }
-    }, [isSuccess, effect]);
+    }, [isSuccess, isEffect]);
 
     useEffect(() => {
         let timerId = setTimeout(() => {
@@ -111,56 +120,46 @@ const CreateContainer = () => {
                     </div>
                     <div className={styles.main__content}>
                         <div className={styles.main__forms}>
-                            {ownCards && !isMultiDeck &&
-                            <CardForm
-                                cardsPack_id={cardsPack_id}
-                                setIsEditCardMode={setIsEditCardMode}
-                                isEditCardMode={isEditCardMode}
-                                selectedCard={selectedCard}
-                            />}
-
-                            {ownCards && isMultiDeck &&
-                            <MultiAnswerCardForm
-                                isEditCardMode={isEditCardMode}
-                                selectedCard={selectedCard}
-                                setIsEditCardMode={setIsEditCardMode}
-                                cardsPack_id={cardsPack_id}
-                            />
-                            }
-
-                            {!ownCards &&
-                            <CreateDeckForm
-                                onIsMultiDeckChange={onIsMultiDeckChange}
+                            {isStartMode &&
+                            <Plug isFetching={isCardsFetching}/>}
+                            {!isStartMode &&
+                            <Forms
+                                isSuccess={isSuccess}
                                 isMultiDeck={isMultiDeck}
+                                cardsPack_id={cardsPack_id}
+                                setIsEditCardMode={setIsEditCardMode}
+                                isEditCardMode={isEditCardMode}
+                                selectedCard={selectedCard}
+                                onIsMultiDeckChange={onIsMultiDeckChange}
+                                isPreventFetching={isPreventFetching}
                             />}
-
                         </div>
                         <div className={styles.main__decks}>
                             <DefaultDeck/>
                             <div className={styles.decks__buttons}>
-
                                 <button
-                                    onClick={onExitEditCardMode}
+                                    disabled={!isAuth || (!isSuccess && !isStartMode)}
+                                    onClick={onCreateDeckClick}
                                     className={styles.decks__button}
-                                    disabled={!isSuccess}
                                 >
                                     create new deck
                                 </button>
-
                                 <button
-                                    onClick={onDeleteDeck}
+                                    onClick={()=> {setPopupDeleteDeck (true)}}
                                     className={styles.decks__button}
                                     disabled={!isSuccess}
                                 >
                                     delete deck
                                 </button>
-
                             </div>
                         </div>
+                        <PopupDeleteDeck popupDeleteDeck={popupDeleteDeck}
+                                         setPopupDeleteDeck={setPopupDeleteDeck}
+                                         onDeleteDeck={onDeleteDeck}/>
                     </div>
                 </div>
                 <div className={styles.create__aside}>
-                    {!ownCards && <OwnCardsLogout effect={effect}/>}
+                    {!ownCards && <OwnCardsLogout effect={isEffect}/>}
                     {ownCards && <OwnCards
                         onDeleteCard={onDeleteCard}
                         onCancelEditCardClick={onCancelEditCardClick}
@@ -169,6 +168,7 @@ const CreateContainer = () => {
                         isEditCardMode={isEditCardMode}
                         onEditCardClick={onEditCardClick}
                         selectedCardId={selectedCardId}
+                        isCardsFetching={isCardsFetching}
                     />}
                 </div>
             </div>

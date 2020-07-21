@@ -1,12 +1,12 @@
 import React, {useMemo} from 'react';
 import {useForm} from "react-hook-form";
 import {useDispatch} from "react-redux";
-import {createDeck} from "../../../../bll/currentUserDecks/currentUserDecksReducer";
+import {createDeck} from "../../../../../bll/currentUserDecks/currentUserDecksReducer";
 import styles from "./CreateDeckForm.module.css"
-import CreateCardTextarea from "../../../common/createCardTextarea/CreateCardTextarea";
+import CreateCardTextarea from "../../../../common/createCardTextarea/CreateCardTextarea";
 import * as yup from "yup";
-import CreateCardButton from "../../../common/CreateCardButton/CreateCardButton";
-import {getRestLimit} from "../../../../helpers/restLimit/restLimit";
+import CreateCardButton from "../../../../common/CreateCardButton/CreateCardButton";
+import {getRestLimit} from "../../../../../helpers/restLimit/restLimit";
 
 type CreateDeckFormType = {
     deckName: string
@@ -15,11 +15,13 @@ type CreateDeckFormType = {
 type PropsType = {
     onIsMultiDeckChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     isMultiDeck: boolean
+    isPreventFetching: boolean
 }
 
 const CreateDeckForm: React.FC<PropsType> = React.memo(({
                                                             onIsMultiDeckChange,
                                                             isMultiDeck,
+                                                            isPreventFetching,
                                                      }) => {
 
     const dispatch = useDispatch();
@@ -70,7 +72,12 @@ const CreateDeckForm: React.FC<PropsType> = React.memo(({
                     <div className={styles.checkBox__span}>multi answer deck</div>
                 </div>
                 <div  className={styles.formbuttons__wrap}>
-                    <CreateCardButton className={styles.form__button}>Create</CreateCardButton>
+                    <CreateCardButton
+                        disabled={isPreventFetching}
+                        className={styles.form__button}
+                    >
+                        Create
+                    </CreateCardButton>
                 </div>
             </form>
         </div>

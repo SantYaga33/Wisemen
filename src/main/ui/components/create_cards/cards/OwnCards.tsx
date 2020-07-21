@@ -11,7 +11,9 @@ type PropsType = {
     onCancelEditCardClick: () => void
     selectedCardId: string
     onDeleteCard: (e: React.MouseEvent<HTMLButtonElement>) => void
+    isCardsFetching: boolean
 }
+
 
 const OwnCards: React.FC<PropsType> = React.memo(({
                                                       cards,
@@ -20,7 +22,8 @@ const OwnCards: React.FC<PropsType> = React.memo(({
                                                       isEditCardMode,
                                                       onCancelEditCardClick,
                                                       selectedCardId,
-                                                      onDeleteCard
+                                                      onDeleteCard,
+                                                      isCardsFetching,
                                                   }) => {
     useEffect(() => {
 
@@ -52,33 +55,34 @@ const OwnCards: React.FC<PropsType> = React.memo(({
                     <div className={styles.data__item_box}>
                         {cards.length === 0 ? <EmptyDeck/> :
                             (cards.map(cards =>
-                                    <div key={cards._id} className={styles.data__item} 	id={cards._id +1}>
-                                        <div className={styles.item__question}>{cards.question}</div>
-                                        <div className={styles.data__border}></div>
-                                        <div className={styles.item__answer}>{cards.answer}</div>
-                                        <div className={styles.data__border}></div>
-                                        <div className={styles.data__buttons}>
-                                            {isEditCardMode && cards._id === selectedCardId &&
-											<button className={styles.data__button} onClick={onCancelEditCardClick}>
-												cancel
-											</button>}
+                                <div key={cards._id} className={styles.data__item} id={cards._id + 1}>
+                                    <div className={styles.item__question}>{cards.question}</div>
+                                    <div className={styles.data__border}></div>
+                                    <div className={styles.item__answer}>{cards.answer}</div>
+                                    <div className={styles.data__border}></div>
+                                    <div className={styles.data__buttons}>
+                                        {isEditCardMode && cards._id === selectedCardId &&
+                                        <button className={styles.data__button} onClick={onCancelEditCardClick}>
+                                            cancel
+                                        </button>}
 
-                                            {(isEditCardMode && cards._id !== selectedCardId || !isEditCardMode) &&
-											<button className={styles.data__button}
-													id={cards._id}
-													onClick={onEditCardClick}
-											>
-												edit
-											</button>}
-                                            <button
+                                        {(isEditCardMode && cards._id !== selectedCardId || !isEditCardMode) &&
+                                        <button className={styles.data__button}
                                                 id={cards._id}
-                                                onClick={onDeleteCard}
-                                                className={styles.data__button}
-                                            >
-                                                delete
-                                            </button>
-                                        </div>
+                                                onClick={onEditCardClick}
+                                        >
+                                            edit
+                                        </button>}
+                                        <button
+                                            disabled={isCardsFetching}
+                                            id={cards._id}
+                                            onClick={onDeleteCard}
+                                            className={styles.data__button}
+                                        >
+                                            delete
+                                        </button>
                                     </div>
+                                </div>
                             ))
                         }
                     </div>
