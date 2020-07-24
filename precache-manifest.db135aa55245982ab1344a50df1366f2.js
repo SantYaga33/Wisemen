@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee17eabc746a68c6db0b19807f3c9efb",
+    "revision": "986fb1ad674b420e027f332f6a8bde1a",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "b9d0aaee133eea60dd89",
-    "url": "/Wisemen/static/css/main.99001379.chunk.css"
+    "revision": "bee059cbbc38c55e63fe",
+    "url": "/Wisemen/static/css/main.30f8b7e8.chunk.css"
   },
   {
-    "revision": "33f51e951001e85e8b29",
-    "url": "/Wisemen/static/js/2.1eb52060.chunk.js"
+    "revision": "ba4a131a75411522e186",
+    "url": "/Wisemen/static/js/2.fa033b43.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.1eb52060.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.fa033b43.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b9d0aaee133eea60dd89",
-    "url": "/Wisemen/static/js/main.15c07d73.chunk.js"
+    "revision": "bee059cbbc38c55e63fe",
+    "url": "/Wisemen/static/js/main.1c288aeb.chunk.js"
   },
   {
     "revision": "4ecfdefd650125f61227",
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6d3c6b9ecbd4cc4ddbdc7d5f7970f916",
     "url": "/Wisemen/static/media/2.6d3c6b9e.gif"
-  },
-  {
-    "revision": "97bf8fb49e0dde37ad540fe106d54b59",
-    "url": "/Wisemen/static/media/3.97bf8fb4.png"
   },
   {
     "revision": "106a1379dae3231365ac7d6269374f26",
@@ -504,6 +500,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/newIntro.cd59e4a2.mp4"
   },
   {
+    "revision": "378d21fde9200ef1f9152b1e6f4c4481",
+    "url": "/Wisemen/static/media/plug-bg-4-1.378d21fd.png"
+  },
+  {
     "revision": "cb23fb2fd0e7b4115b78dceda0565116",
     "url": "/Wisemen/static/media/point-shadow2.cb23fb2f.png"
   },
@@ -534,6 +534,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "98b111ff52dcc31e2ee27741df9cce87",
     "url": "/Wisemen/static/media/thinking-face.98b111ff.png"
+  },
+  {
+    "revision": "1ddaae1bf6cb4c1de8ccf5c921a856b2",
+    "url": "/Wisemen/static/media/trash-delete.1ddaae1b.mp3"
   },
   {
     "revision": "d42b535de9b3a5a87e6115a16bcc5035",

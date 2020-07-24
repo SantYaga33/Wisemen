@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.99001379.chunk.css",
-    "main.js": "/Wisemen/static/js/main.15c07d73.chunk.js",
-    "main.js.map": "/Wisemen/static/js/main.15c07d73.chunk.js.map",
+    "main.css": "/Wisemen/static/css/main.30f8b7e8.chunk.css",
+    "main.js": "/Wisemen/static/js/main.1c288aeb.chunk.js",
+    "main.js.map": "/Wisemen/static/js/main.1c288aeb.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.f6a3cafd.js",
     "runtime-main.js.map": "/Wisemen/static/js/runtime-main.f6a3cafd.js.map",
-    "static/js/2.1eb52060.chunk.js": "/Wisemen/static/js/2.1eb52060.chunk.js",
-    "static/js/2.1eb52060.chunk.js.map": "/Wisemen/static/js/2.1eb52060.chunk.js.map",
+    "static/js/2.fa033b43.chunk.js": "/Wisemen/static/js/2.fa033b43.chunk.js",
+    "static/js/2.fa033b43.chunk.js.map": "/Wisemen/static/js/2.fa033b43.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.b0762a4079679aad94be60b27cdc649b.js": "/Wisemen/precache-manifest.b0762a4079679aad94be60b27cdc649b.js",
+    "precache-manifest.db135aa55245982ab1344a50df1366f2.js": "/Wisemen/precache-manifest.db135aa55245982ab1344a50df1366f2.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.99001379.chunk.css.map": "/Wisemen/static/css/main.99001379.chunk.css.map",
-    "static/js/2.1eb52060.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.1eb52060.chunk.js.LICENSE.txt",
+    "static/css/main.30f8b7e8.chunk.css.map": "/Wisemen/static/css/main.30f8b7e8.chunk.css.map",
+    "static/js/2.fa033b43.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.fa033b43.chunk.js.LICENSE.txt",
     "static/media/1.gif": "/Wisemen/static/media/1.ff6785d8.gif",
     "static/media/2.gif": "/Wisemen/static/media/2.6d3c6b9e.gif",
-    "static/media/Plug.module.css": "/Wisemen/static/media/3.97bf8fb4.png",
     "static/media/index.css": "/Wisemen/static/media/CSGrimrock.bd07c961.woff",
     "static/media/Intro-53-commpres-webm.webm": "/Wisemen/static/media/Intro-53-commpres-webm.f9da5a9c.webm",
     "static/media/LOGOUT.png": "/Wisemen/static/media/LOGOUT.83f9e0b2.png",
@@ -124,6 +123,7 @@
     "static/media/main-bg.webp": "/Wisemen/static/media/main-bg.3f952342.webp",
     "static/media/Taverna.module.css": "/Wisemen/static/media/menu-yellow.92cca677.jpg",
     "static/media/newIntro.mp4": "/Wisemen/static/media/newIntro.cd59e4a2.mp4",
+    "static/media/Plug.module.css": "/Wisemen/static/media/plug-bg-4-1.378d21fd.png",
     "static/media/point-shadow2.png": "/Wisemen/static/media/point-shadow2.cb23fb2f.png",
     "static/media/scroll.webp": "/Wisemen/static/media/scroll.32469697.webp",
     "static/media/shield.svg": "/Wisemen/static/media/shield.0730273e.svg",
@@ -132,12 +132,13 @@
     "static/media/sound-on.svg": "/Wisemen/static/media/sound-on.8ef34d26.svg",
     "static/media/taverna-shadow2.png": "/Wisemen/static/media/taverna-shadow2.24dd3426.png",
     "static/media/CardDownside.module.css": "/Wisemen/static/media/thinking-face.98b111ff.png",
+    "static/media/trash-delete.mp3": "/Wisemen/static/media/trash-delete.1ddaae1b.mp3",
     "static/media/анимация-путник-с-фоном.gif": "/Wisemen/static/media/анимация-путник-с-фоном.1adb0455.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.f6a3cafd.js",
-    "static/js/2.1eb52060.chunk.js",
-    "static/css/main.99001379.chunk.css",
-    "static/js/main.15c07d73.chunk.js"
+    "static/js/2.fa033b43.chunk.js",
+    "static/css/main.30f8b7e8.chunk.css",
+    "static/js/main.1c288aeb.chunk.js"
   ]
 }
