@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.b7a382d3.chunk.css",
-    "main.js": "/Wisemen/static/js/main.314a4eaa.chunk.js",
-    "main.js.map": "/Wisemen/static/js/main.314a4eaa.chunk.js.map",
+    "main.css": "/Wisemen/static/css/main.c76ae9cc.chunk.css",
+    "main.js": "/Wisemen/static/js/main.9b5dfa3d.chunk.js",
+    "main.js.map": "/Wisemen/static/js/main.9b5dfa3d.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.f6a3cafd.js",
     "runtime-main.js.map": "/Wisemen/static/js/runtime-main.f6a3cafd.js.map",
-    "static/js/2.c9cf97c8.chunk.js": "/Wisemen/static/js/2.c9cf97c8.chunk.js",
-    "static/js/2.c9cf97c8.chunk.js.map": "/Wisemen/static/js/2.c9cf97c8.chunk.js.map",
+    "static/js/2.92d6dcbb.chunk.js": "/Wisemen/static/js/2.92d6dcbb.chunk.js",
+    "static/js/2.92d6dcbb.chunk.js.map": "/Wisemen/static/js/2.92d6dcbb.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.f8dad1bf9afb1a813db4404a4d634686.js": "/Wisemen/precache-manifest.f8dad1bf9afb1a813db4404a4d634686.js",
+    "precache-manifest.61469a587f0612b279f2b762ef5d30b3.js": "/Wisemen/precache-manifest.61469a587f0612b279f2b762ef5d30b3.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.b7a382d3.chunk.css.map": "/Wisemen/static/css/main.b7a382d3.chunk.css.map",
-    "static/js/2.c9cf97c8.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.c9cf97c8.chunk.js.LICENSE.txt",
+    "static/css/main.c76ae9cc.chunk.css.map": "/Wisemen/static/css/main.c76ae9cc.chunk.css.map",
+    "static/js/2.92d6dcbb.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.92d6dcbb.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Wisemen/static/media/CSGrimrock.bd07c961.woff",
     "static/media/Intro-53-commpres-webm.webm": "/Wisemen/static/media/Intro-53-commpres-webm.f9da5a9c.webm",
     "static/media/LOGOUT.png": "/Wisemen/static/media/LOGOUT.83f9e0b2.png",
@@ -106,6 +106,7 @@
     "static/media/card-bg-RR.png": "/Wisemen/static/media/card-bg-RR.0044d1d5.png",
     "static/media/card.mp3": "/Wisemen/static/media/card.b6e10661.mp3",
     "static/media/clouse-shadow2.png": "/Wisemen/static/media/clouse-shadow2.738f9628.png",
+    "static/media/correctly.mp3": "/Wisemen/static/media/correctly.976815d4.mp3",
     "static/media/Create.module.css": "/Wisemen/static/media/create-bg2.7f4b2b59.jpg",
     "static/media/Menu.module.css": "/Wisemen/static/media/cтена-218.72a9f608.png",
     "static/media/deck.mp3": "/Wisemen/static/media/deck.b2c3f6af.mp3",
@@ -121,6 +122,7 @@
     "static/media/main-bg.png": "/Wisemen/static/media/main-bg.01fb4adf.png",
     "static/media/main-bg.webp": "/Wisemen/static/media/main-bg.3f952342.webp",
     "static/media/Taverna.module.css": "/Wisemen/static/media/menu-yellow.92cca677.jpg",
+    "static/media/mistake.mp3": "/Wisemen/static/media/mistake.9bd2bbfd.mp3",
     "static/media/newIntro.mp4": "/Wisemen/static/media/newIntro.cd59e4a2.mp4",
     "static/media/Plug.module.css": "/Wisemen/static/media/plug-bg-4-1.378d21fd.png",
     "static/media/point-shadow2.png": "/Wisemen/static/media/point-shadow2.cb23fb2f.png",
@@ -135,8 +137,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f6a3cafd.js",
-    "static/js/2.c9cf97c8.chunk.js",
-    "static/css/main.b7a382d3.chunk.css",
-    "static/js/main.314a4eaa.chunk.js"
+    "static/js/2.92d6dcbb.chunk.js",
+    "static/css/main.c76ae9cc.chunk.css",
+    "static/js/main.9b5dfa3d.chunk.js"
   ]
 }
