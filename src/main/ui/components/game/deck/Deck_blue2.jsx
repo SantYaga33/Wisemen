@@ -2,17 +2,22 @@ import React from 'react';
 import styles from './Deck_blue2.module.css';
 import deckBG from '../../../images/card-bg-LR.png';
 import { cardBG, getRandomBg, maxNumber } from "../../../common/random_bg/Random_bg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getCurrentFavCard } from "../../../../bll/favoriteDecks/favoriteDecksReducer";
 
 
-const Deck_blue2 = ({ setCardBg }) => {
+const Deck_blue2 = ({ setCardBg, setCardFace }) => {
 
 	const { userFavoriteDecks } = useSelector ((state) => state.favoriteDecks);
+	const dispatch = useDispatch ();
 
 	const onChangeBG = () => {
+		setCardFace(true);
 		getRandomBg (maxNumber);
 		setCardBg(cardBG);
+		dispatch(getCurrentFavCard());
 	}
+
 
 	return (
 		<div className={styles.deck__wrap} onClick={onChangeBG}>
@@ -21,7 +26,7 @@ const Deck_blue2 = ({ setCardBg }) => {
 					<img src={deckBG} alt="images"/>
 				</div>
 				<div className={styles.deck__details}>
-					<h2>{userFavoriteDecks.favoriteDecks[5].deckName}</h2>
+					<h4>{userFavoriteDecks.favoriteDecks[5].deckName}</h4>
 				</div>
 			</div>
 		</div>

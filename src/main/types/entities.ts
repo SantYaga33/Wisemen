@@ -25,6 +25,7 @@ export type CardType = {
     __v: number
     _id: string
     user_id: string
+    wrongAnswers?: Array<string>
 }
 
 
@@ -65,11 +66,17 @@ export type UserFavoriteDeckType = {
     favoriteDeckId: string
     deckName: string
     deck: Array<CardType>
+    analytics?: AnalyticsType
 }
 
 export type UserFavoriteDecksType = {
     userId: string
     favoriteDecks: Array<UserFavoriteDeckType>
+}
+
+export type AnalyticsType = {
+    prevAnalytics: currentAnalyticsType
+    bestAnalytics: currentAnalyticsType
 }
 
 export type currentAnalyticsType = {

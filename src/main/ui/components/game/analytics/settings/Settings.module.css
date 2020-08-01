@@ -1,31 +1,52 @@
 .switcher__wrap {
     width: 100%;
     height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 20px;
+}
+
+.switcher__popupBlock {
+    width: 100%;
+    height: 98px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background-color: transparent;
 }
 
 .switcher__info {
     width: 100%;
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .switcher__title {
     margin: 0;
     padding: 0;
     color: #0b3b63;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.75);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.switcher__title:hover {
+    color: orange;
+    transition: all .3s ease;
 }
 
 .radio__wrap {
     display: flex;
     position: relative;
-    width: 100px;
-    justify-content: space-between;
+    width: 117px;
+    height: 36px;
+    justify-content: space-evenly;
     cursor: pointer;
 }
 
@@ -48,6 +69,7 @@
     font-size: 14px;
     font-family: sans-serif;
     cursor: pointer;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.75);
     transition: all 0.3s ease;
 }
 
@@ -71,6 +93,7 @@
     background-size: 50% 50%;
     transition: all 0.3s ease;
     cursor: pointer;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .radio__custom > .radio__input:not(:disabled):not(:checked)+.radio__titlte:hover:before {
@@ -112,6 +135,8 @@
     height: 26px;
     border-radius: 25px;
     cursor: pointer;
+    width: auto;
+    height: auto;
 
 }
 
@@ -128,8 +153,9 @@
     outline: none;
     font-family:  sans-serif;
     cursor: pointer;
-
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     border: 1px solid #0b3b63;
+
 }
 
 .switcher .switcher__input:before, .switcher .switcher__input:after {
@@ -252,10 +278,10 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
 
-    top: -84%;
+    top: -40%;
     width: 150%;
-    right: -210px;
-    height: 250%;
+    right: -180px;
+    height: 170%;
 }
 
 .tooltip_wrap {
