@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.c76ae9cc.chunk.css",
-    "main.js": "/Wisemen/static/js/main.9b5dfa3d.chunk.js",
-    "main.js.map": "/Wisemen/static/js/main.9b5dfa3d.chunk.js.map",
+    "main.css": "/Wisemen/static/css/main.41876e51.chunk.css",
+    "main.js": "/Wisemen/static/js/main.5021b978.chunk.js",
+    "main.js.map": "/Wisemen/static/js/main.5021b978.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.f6a3cafd.js",
     "runtime-main.js.map": "/Wisemen/static/js/runtime-main.f6a3cafd.js.map",
-    "static/js/2.92d6dcbb.chunk.js": "/Wisemen/static/js/2.92d6dcbb.chunk.js",
-    "static/js/2.92d6dcbb.chunk.js.map": "/Wisemen/static/js/2.92d6dcbb.chunk.js.map",
+    "static/js/2.42339a50.chunk.js": "/Wisemen/static/js/2.42339a50.chunk.js",
+    "static/js/2.42339a50.chunk.js.map": "/Wisemen/static/js/2.42339a50.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.61469a587f0612b279f2b762ef5d30b3.js": "/Wisemen/precache-manifest.61469a587f0612b279f2b762ef5d30b3.js",
+    "precache-manifest.de820532edbdff1fab0d992f2b6e7255.js": "/Wisemen/precache-manifest.de820532edbdff1fab0d992f2b6e7255.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.c76ae9cc.chunk.css.map": "/Wisemen/static/css/main.c76ae9cc.chunk.css.map",
-    "static/js/2.92d6dcbb.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.92d6dcbb.chunk.js.LICENSE.txt",
+    "static/css/main.41876e51.chunk.css.map": "/Wisemen/static/css/main.41876e51.chunk.css.map",
+    "static/js/2.42339a50.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.42339a50.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Wisemen/static/media/CSGrimrock.bd07c961.woff",
     "static/media/Intro-53-commpres-webm.webm": "/Wisemen/static/media/Intro-53-commpres-webm.f9da5a9c.webm",
     "static/media/LOGOUT.png": "/Wisemen/static/media/LOGOUT.83f9e0b2.png",
@@ -113,6 +113,8 @@
     "static/media/UserDecks.module.css": "/Wisemen/static/media/decks-bg.01746c21.png",
     "static/media/decor-gold.png": "/Wisemen/static/media/decor-gold.3d20cf8c.png",
     "static/media/decor.png": "/Wisemen/static/media/decor.e19904ec.png",
+    "static/media/dragon-fly.mp3": "/Wisemen/static/media/dragon-fly.7c27b305.mp3",
+    "static/media/dragon-gif.gif": "/Wisemen/static/media/dragon-gif.041ebca9.gif",
     "static/media/Find.module.css": "/Wisemen/static/media/unit.d42b535d.jpg",
     "static/media/graph.png": "/Wisemen/static/media/graph.e1d8185b.png",
     "static/media/Header.module.css": "/Wisemen/static/media/header-bg-cloud80.c1386685.png",
@@ -137,8 +139,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f6a3cafd.js",
-    "static/js/2.92d6dcbb.chunk.js",
-    "static/css/main.c76ae9cc.chunk.css",
-    "static/js/main.9b5dfa3d.chunk.js"
+    "static/js/2.42339a50.chunk.js",
+    "static/css/main.41876e51.chunk.css",
+    "static/js/main.5021b978.chunk.js"
   ]
 }
