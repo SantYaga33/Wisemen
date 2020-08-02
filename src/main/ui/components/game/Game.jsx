@@ -36,13 +36,39 @@ const Game = () => {
         dispatch(getCurrentFavDeck(favoriteDeckId));
     };
 
-    useMemo( () => {
-        loudlinks (isSound);
-    },[isSound]);
-
     useEffect(() => {
 		dispatch(getCurrentFavDeck('favoriteDeckSlot0'));
     }, [dispatch, isSound]);
+
+    const onClickSound = () => {
+        const nextCardDecksEl = document.getElementById('nextCardDecks');
+        nextCardDecksEl.play();
+    };
+
+    useEffect( () => {
+
+        const onSoundHoverEl = document.getElementById ('onSoundHover');
+        const soundHoverEl = document.getElementById ('soundHover');
+
+        if(onSoundHoverEl && soundHoverEl) {
+            onSoundHoverEl.addEventListener('mouseenter', () => {
+                soundHoverEl.play();
+            });
+
+            onSoundHoverEl.addEventListener('mouseleave', () => {
+                soundHoverEl.pause();
+                soundHoverEl.currentTime = 0;
+            });
+
+            onSoundHoverEl.addEventListener('touchmove', () => {
+                soundHoverEl.pause();
+                soundHoverEl.currentTime = 0;
+            });
+
+        }
+
+    },[]);
+
 
     return (
         <div className={styles.game__wrap}>
@@ -64,7 +90,7 @@ const Game = () => {
                     {
                         startMatrix &&
                         <div className={styles.analytics__data}>
-                            <Graph setCardFace={setCardFace}/>
+                            <Graph setCardFace={setCardFace} isSound={isSound}/>
                             <Matrix/>
                         </div>
                     }
@@ -188,15 +214,21 @@ const Game = () => {
                             {cardface && <Card cardBg={cardBg} setCardFace={setCardFace} cardface={cardface}/>}
                             {!cardface && <CardDownside setCardFace={setCardFace} />}
                             <div className={styles.content__buttons}>
-                                <Buttons setCardFace={setCardFace} cardface={cardface} setCardBg={setCardBg}/>
+                                <Buttons setCardFace={setCardFace} cardface={cardface} setCardBg={setCardBg} isSound={isSound}/>
                             </div>
                         </div>
-                        <div className='soundClick' data-sound={soundCard}>
-                            {/*<div className='soundHover' data-sound={soundDeck}>*/}
+                        <div onClick={onClickSound}>
+                            <div  id='onSoundHover'>
                                 <div className={`${styles.main__deck}`}>
                                     <DecksRoutes setCardBg={setCardBg} setCardFace={setCardFace}/>
                                 </div>
-                            {/*</div>*/}
+                                <audio autoPlay={false} muted={!isSound} id='nextCardDecks'>
+                                    <source src={soundCard} type="audio/mpeg"/>
+                                </audio>
+                                <audio autoPlay={false} muted={!isSound} id='soundHover'>
+                                    <source src={soundDeck} type="audio/mpeg"/>
+                                </audio>
+                            </div>
                         </div>
                     </div>
                 </div>
