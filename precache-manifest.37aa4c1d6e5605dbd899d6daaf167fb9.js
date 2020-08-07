@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "165a9a0d0c3104f6119591d7bd1d6333",
+    "revision": "581f332542bde313c242ce8a04b74e03",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "b08419e4948a9e0c3080",
-    "url": "/Wisemen/static/css/main.30f4846b.chunk.css"
+    "revision": "7458f1e818ad3868393a",
+    "url": "/Wisemen/static/css/main.d5e4a85a.chunk.css"
   },
   {
-    "revision": "55198583bff515f0d90a",
-    "url": "/Wisemen/static/js/2.57938614.chunk.js"
+    "revision": "f06ef6d888a818d9bd53",
+    "url": "/Wisemen/static/js/2.5884119c.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.57938614.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.5884119c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b08419e4948a9e0c3080",
-    "url": "/Wisemen/static/js/main.df456cad.chunk.js"
+    "revision": "7458f1e818ad3868393a",
+    "url": "/Wisemen/static/js/main.c8933a58.chunk.js"
   },
   {
     "revision": "4ecfdefd650125f61227",
@@ -62,6 +62,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ce0590f25784fe7cf6f52f910d28207d",
     "url": "/Wisemen/static/media/about-shadow2.ce0590f2.png"
+  },
+  {
+    "revision": "1d202f6564a29ab6c32af058760db673",
+    "url": "/Wisemen/static/media/added.1d202f65.mp3"
+  },
+  {
+    "revision": "33852013379f6b325c1572e0b6337967",
+    "url": "/Wisemen/static/media/arrow-axis.33852013.svg"
   },
   {
     "revision": "1daa40531500e0ca3ba71d52c815b02f",
@@ -528,6 +536,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/point-shadow2.cb23fb2f.png"
   },
   {
+    "revision": "5fe67858eb78ccf72b5738649649929c",
+    "url": "/Wisemen/static/media/remove_delete.5fe67858.mp3"
+  },
+  {
     "revision": "32469697aeb519186bd3c8480d1e5e19",
     "url": "/Wisemen/static/media/scroll.32469697.webp"
   },
@@ -554,10 +566,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "98b111ff52dcc31e2ee27741df9cce87",
     "url": "/Wisemen/static/media/thinking-face.98b111ff.png"
-  },
-  {
-    "revision": "1ddaae1bf6cb4c1de8ccf5c921a856b2",
-    "url": "/Wisemen/static/media/trash-delete.1ddaae1b.mp3"
   },
   {
     "revision": "d42b535de9b3a5a87e6115a16bcc5035",
