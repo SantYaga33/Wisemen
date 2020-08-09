@@ -8,6 +8,7 @@ import dragonFly from '../../../../audio/dragon-fly.mp3';
 import fireworksSound from '../../../../audio/fireworks.mp3';
 import dragonCloud from '../../../../images/header-bg-cloud80.png';
 import Data from "./graph_data/Data";
+import Totals from "./graph_totals/Totals";
 
 
 const Graph = ({ setCardFace, isSound }) => {
@@ -31,13 +32,23 @@ const Graph = ({ setCardFace, isSound }) => {
 
 	}, [ fadeIn, dragon ]);
 
+
+
+
 	const classForGraph = fadeIn ? `${styles.graph__wrap_active}` : `${styles.graph__wrap}`;
 
 	return (
 		<div className={classForGraph}>
 			<div className={styles.graph__title}>Graph</div>
 			<div className={styles.graph__graph}>
-				<Data />
+
+
+				{/*<Data />*/}
+
+
+				<Totals/>
+
+
 				{/*{dragon &&*/}
 				{/*<>*/}
 				{/*	<div className={styles.dragon__cloud}>*/}
