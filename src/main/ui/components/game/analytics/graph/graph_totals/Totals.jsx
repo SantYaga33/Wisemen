@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react';
 import styles from './Totals.module.css';
 import FluidMeter from "../../../../../../helpers/fluid_meter/js-fluid-meter";
+import { deltaRightAnswers } from "../graph_data/Data";
+import { useSelector } from "react-redux";
 
 
 const Totals = () => {
+
+	const { percentRightAnswers } = useSelector ((state) => state.favoriteDecks);
+
 	useEffect (() => {
+
 		let fm = new FluidMeter ();
 		fm.init ({
 			targetContainer: document.getElementById ("fluid-meter"),
@@ -37,23 +43,24 @@ const Totals = () => {
 				}
 			}
 		});
+		fm.setPercentage (10);// не передается percentRightAnswers
 
-		fm.setPercentage (65);
-	}, [])
+	}, [percentRightAnswers])
 
 	return (
 		<div className={styles.totals__wrap}>
+			<h4 className={styles.totals__title}>Your test result</h4>
 			<div className={styles.totals__canvas} id="fluid-meter"></div>
 			<div className={styles.totals__discr}>
-				<div className={styles.totals__title}>correct answers:</div>
+				<div className={styles.totals__info}>correct answers:</div>
 				 <span className={styles.totals__number}>36</span>
 			</div>
 			<div className={styles.totals__discr}>
-				<div className={styles.totals__title}>wrong answers:</div>
+				<div className={styles.totals__info}>wrong answers:</div>
 				<span className={styles.totals__number}>16</span>
 			</div>
 			<div className={styles.totals__discr}>
-				<div className={styles.totals__title}>missed answers:</div>
+				<div className={styles.totals__info}>missed answers:</div>
 				<span className={styles.totals__number}>7</span>
 			</div>
 

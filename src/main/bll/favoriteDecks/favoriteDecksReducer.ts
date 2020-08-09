@@ -23,7 +23,8 @@ const initialState = {
     currentFavDeck: {
         favoriteDeckId: '',
         deckName: '',
-        deck: []
+        deck: [],
+        cardsCount: 0
     } as UserFavoriteDeckType,
 
     currentFavCard: {} as CardType,
@@ -44,6 +45,7 @@ const initialState = {
     isRandomMode: true,
     isTestModeStart: false,
     isTestModeBreak: false,
+    percentRightAnswers: 0
 };
 
 type InitialStateType = typeof initialState
@@ -186,6 +188,11 @@ export const favoriteDecksReducer =
                     ...state,
                     isTestModeBreak: action.isTestModeBreak
                 }
+            case "FAVORITE_DECKS_REDUCER/SET_PERSENT_RIGHT_ANSWER":
+                return {
+                    ...state,
+                    percentRightAnswers: action.percentRightAnswers
+                }
 
             default:
                 return state
@@ -260,6 +267,10 @@ export const favoriteDecksActions = {
     setIsTestBreak: (isTestModeBreak: boolean) => ({
         type: 'FAVORITE_DECKS_REDUCER/SET_IS_TEST_BREAK',
         isTestModeBreak
+    } as const),
+    setPercentRightAnswers: (percentRightAnswers: number) => ({
+        type: 'FAVORITE_DECKS_REDUCER/SET_PERSENT_RIGHT_ANSWER',
+        percentRightAnswers
     } as const),
 };
 

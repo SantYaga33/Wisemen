@@ -201,7 +201,7 @@ export const repository = {
                         userId,
                         favoriteDecks: [
                             {
-                                favoriteDeckId: 'favoriteDeckSlot0', deckName: 'React Native', deck: [
+                                favoriteDeckId: 'favoriteDeckSlot0', deckName: 'React Native', cardsCount: 61, deck: [
                                     {
                                         answer: 'Если компонент имеет состояние или значимые методы',
                                         question: 'В каких случаях Class Component лучше, чем Functional Component?',
@@ -1002,11 +1002,11 @@ export const repository = {
                                     },
                                 ]
                             },
-                            {favoriteDeckId: 'favoriteDeckSlot1', deckName: 'empty', deck: []},
-                            {favoriteDeckId: 'favoriteDeckSlot2', deckName: 'empty', deck: []},
-                            {favoriteDeckId: 'favoriteDeckSlot3', deckName: 'empty', deck: []},
-                            {favoriteDeckId: 'favoriteDeckSlot4', deckName: 'empty', deck: []},
-                            {favoriteDeckId: 'favoriteDeckSlot5', deckName: 'empty', deck: []},
+                            {favoriteDeckId: 'favoriteDeckSlot1', deckName: 'empty', cardsCount: 0, deck: []},
+                            {favoriteDeckId: 'favoriteDeckSlot2', deckName: 'empty', cardsCount: 0, deck: []},
+                            {favoriteDeckId: 'favoriteDeckSlot3', deckName: 'empty', cardsCount: 0, deck: []},
+                            {favoriteDeckId: 'favoriteDeckSlot4', deckName: 'empty', cardsCount: 0, deck: []},
+                            {favoriteDeckId: 'favoriteDeckSlot5', deckName: 'empty', cardsCount: 0, deck: []},
                         ]
                     }
                 ]
@@ -1020,7 +1020,7 @@ export const repository = {
                     userId,
                     favoriteDecks: [
                         {
-                            favoriteDeckId: 'favoriteDeckSlot0', deckName: 'React Native', deck: [
+                            favoriteDeckId: 'favoriteDeckSlot0', deckName: 'React Native', cardsCount: 61, deck: [
                                 {
                                     answer: 'Если компонент имеет состояние или значимые методы',
                                     question: 'В каких случаях Class Component лучше, чем Functional Component?',
@@ -1821,11 +1821,11 @@ export const repository = {
                                 },
                             ]
                         },
-                        {favoriteDeckId: 'favoriteDeckSlot1', deckName: 'empty', deck: []},
-                        {favoriteDeckId: 'favoriteDeckSlot2', deckName: 'empty', deck: []},
-                        {favoriteDeckId: 'favoriteDeckSlot3', deckName: 'empty', deck: []},
-                        {favoriteDeckId: 'favoriteDeckSlot4', deckName: 'empty', deck: []},
-                        {favoriteDeckId: 'favoriteDeckSlot5', deckName: 'empty', deck: []},
+                        {favoriteDeckId: 'favoriteDeckSlot1', deckName: 'empty', cardsCount: 0, deck: []},
+                        {favoriteDeckId: 'favoriteDeckSlot2', deckName: 'empty', cardsCount: 0, deck: []},
+                        {favoriteDeckId: 'favoriteDeckSlot3', deckName: 'empty', cardsCount: 0, deck: []},
+                        {favoriteDeckId: 'favoriteDeckSlot4', deckName: 'empty', cardsCount: 0, deck: []},
+                        {favoriteDeckId: 'favoriteDeckSlot5', deckName: 'empty', cardsCount: 0, deck: []},
                     ]
                 }
             ]

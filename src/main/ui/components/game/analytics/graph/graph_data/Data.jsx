@@ -1,12 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Data.module.css';
 import arrowAxis from '../../../../../icons/arrow-axis.svg';
-
+import { useDispatch, useSelector } from "react-redux";
+import { favoriteDecksActions } from "../../../../../../bll/favoriteDecks/favoriteDecksReducer";
 
 
 const Data = () => {
 
 	const [ fadeIn, setFadeIn ] = useState (false);
+	const { currentAnalytics, currentFavDeck } = useSelector ((state) => state.favoriteDecks);
+	let countRightAnswers, countFaultsAnswers, countCards, percentPassing = 0, percentRightAnswers = 0;
+	const dispatch = useDispatch ();
+
+	countRightAnswers = currentAnalytics.rightAnswers;
+	countFaultsAnswers = currentAnalytics.faults;
+	countCards = currentFavDeck.cardsCount;
+	percentPassing = Math.floor((countRightAnswers + countFaultsAnswers) * 100 / countCards);
+	percentRightAnswers =  Math.floor(countRightAnswers * 100 / countCards);
+
+	useEffect (() => {
+		const currentPercentEl = document.getElementById('currentPercent');
+		const currentPercentTestEl = document.getElementById('currentPercentTest');
+		currentPercentEl.style.height = `${percentRightAnswers * 2}px`;
+		currentPercentTestEl.style.width = `${percentPassing * 2}px`;
+		dispatch(favoriteDecksActions.setPercentRightAnswers(percentRightAnswers))
+	}, [currentAnalytics.rightAnswers, currentAnalytics.faults ]);
 
 	useEffect (() => {
 		setTimeout (() => {
@@ -41,19 +59,19 @@ const Data = () => {
 						<div className={styles.progressbar__container}>
 							<div className={`${styles.progress_bar} ${styles.stripes} ${styles.animated}
  								${styles.reverse} ${styles.slower}`}>
-								<span className={styles.progress_bar_inner}>
-									<div className={styles.progress__tooltip}>100%</div>
+								<span className={styles.progress_bar_inner} id='currentPercentTest'>
+									<div className={styles.progress__tooltip}>{percentPassing}%</div>
 								</span>
 							</div>
 						</div>
 						</div>
 					</div>
 				</div>
-				<div className={styles.indicator__now}>
-					<div className={styles.now__title}>current value 58%</div>
+				<div className={styles.indicator__now} id='currentPercent'>
+					<div className={styles.now__title}>current value {percentRightAnswers} %</div>
 				</div>
 				<div className={styles.indicator__best}>
-					<div className={styles.best__title}>best</div>
+					<div className={styles.best__title}>your best</div>
 				</div>
 			</div>
 		</div>
