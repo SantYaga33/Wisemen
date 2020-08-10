@@ -27,9 +27,12 @@ const Data = () => {
 	}, [currentAnalytics.rightAnswers, currentAnalytics.faults ]);
 
 	useEffect (() => {
-		setTimeout (() => {
+		let dataIdTimer = setTimeout (() => {
 			setFadeIn (true);
 		}, 1500);
+		return () => {
+			clearTimeout(dataIdTimer);
+		}
 	}, [ fadeIn ]);
 
 	// const classForData = fadeIn ? `${styles.data__wrap_active}` : `${styles.data__wrap}`;

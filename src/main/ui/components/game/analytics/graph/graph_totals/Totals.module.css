@@ -6,6 +6,7 @@
 }
 .totals__canvas {
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .totals__discr {

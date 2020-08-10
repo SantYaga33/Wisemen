@@ -45,7 +45,8 @@ const initialState = {
     isRandomMode: true,
     isTestModeStart: false,
     isTestModeBreak: false,
-    percentRightAnswers: 0
+    percentRightAnswers: 0,
+    bannerForGraph: 'infoBanner'
 };
 
 type InitialStateType = typeof initialState
@@ -188,11 +189,18 @@ export const favoriteDecksReducer =
                     ...state,
                     isTestModeBreak: action.isTestModeBreak
                 }
+
             case "FAVORITE_DECKS_REDUCER/SET_PERSENT_RIGHT_ANSWER":
                 return {
                     ...state,
                     percentRightAnswers: action.percentRightAnswers
                 }
+
+            case "FAVORITE_DECKS_REDUCER/SET_BANNER":
+                        return {
+                            ...state,
+                            bannerForGraph: action.banner
+                        }
 
             default:
                 return state
@@ -268,6 +276,12 @@ export const favoriteDecksActions = {
         type: 'FAVORITE_DECKS_REDUCER/SET_IS_TEST_BREAK',
         isTestModeBreak
     } as const),
+
+    setBanner: (banner: string) => ({
+        type: 'FAVORITE_DECKS_REDUCER/SET_BANNER',
+        banner
+    } as const),
+
     setPercentRightAnswers: (percentRightAnswers: number) => ({
         type: 'FAVORITE_DECKS_REDUCER/SET_PERSENT_RIGHT_ANSWER',
         percentRightAnswers
@@ -340,6 +354,7 @@ export const setEndGame = (): ThunkType =>
         const userId = getState().login.userId;
         if (currentAnalytics.totalCardCount === nextCardNumber) {
             dispatch(favoriteDecksActions.setIsFireworks(true));
+            // dispatch (favoriteDecksActions.setBanner ('fireworksBanner'));
         } else {
             if (gameType === 'test') {
                 /*dispatch(favoriteDecksActions.setIsFireworks(false));*/

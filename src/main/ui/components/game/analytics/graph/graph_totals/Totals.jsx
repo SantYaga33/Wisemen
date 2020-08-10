@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styles from './Totals.module.css';
 import FluidMeter from "../../../../../../helpers/fluid_meter/js-fluid-meter";
 import { deltaRightAnswers } from "../graph_data/Data";
@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 const Totals = () => {
 
 	const { percentRightAnswers } = useSelector ((state) => state.favoriteDecks);
+	const [ percentAnswers, setPercentAnswers ] = useState (75);
 
 	useEffect (() => {
 
@@ -43,9 +44,9 @@ const Totals = () => {
 				}
 			}
 		});
-		fm.setPercentage (10);// не передается percentRightAnswers
+		fm.setPercentage (percentAnswers);
 
-	}, [percentRightAnswers])
+	}, [])
 
 	return (
 		<div className={styles.totals__wrap}>
@@ -63,9 +64,7 @@ const Totals = () => {
 				<div className={styles.totals__info}>missed answers:</div>
 				<span className={styles.totals__number}>7</span>
 			</div>
-
 		</div>
-
 	)
 }
 
