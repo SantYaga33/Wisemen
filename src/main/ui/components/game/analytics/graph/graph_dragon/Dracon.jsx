@@ -15,22 +15,26 @@ const Dragon = () => {
 
 	useEffect (() => {
 
+		// setDragonImg ('');
 		const dragonTimerId = setTimeout (() => {
-			setDragonImg ('');
 			setDragonImg (dragonVD1);
 		}, 0)
 
 		const dragonTimerId1 = setTimeout (() => {
 			setFadeIn (true);
-			dispatch (favoriteDecksActions.setBanner ('totalsBanner'));
-		}, 11000);
+		}, 10500);
+		const dragonTimerId2 = setTimeout (() => {
+				dispatch (favoriteDecksActions.setBanner ('totalsBanner'));
+			}, 11500);
 
 		return () => {
+
 			clearTimeout(dragonTimerId);
 			clearTimeout(dragonTimerId1);
+			clearTimeout(dragonTimerId2);
 		}
-	}, [bannerForGraph]);
-	
+	}, [bannerForGraph, dragonImg]);
+
 	const classForGraph = fadeIn ? `${styles.graph__wrap_active}` : `${styles.graph__wrap}`;
 
 	return (
@@ -45,8 +49,8 @@ const Dragon = () => {
 				<div className={styles.dragon__cloud}></div>
 				<div className={styles.dragon__text}>
 					<div className={styles.dragon__discr}>You did not complete the test.</div>
-					<div className={styles.dragon__discr}>We are very sorry. </div>
-					<div className={styles.dragon__discr}>Your bottom line will be degraded.</div>
+					<div className={styles.dragon__discr}>It means your results </div>
+					<div className={styles.dragon__discr}>will be degraded.</div>
 				</div>
 			</div>
 		</div>

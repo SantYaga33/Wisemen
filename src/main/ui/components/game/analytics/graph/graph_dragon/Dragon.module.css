@@ -1,22 +1,13 @@
 .graph__wrap {
     display: flex;
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
     width: 100%;
     height: 100%;
-    /*overflow: hidden;*/
-    color: #088dcd;
     opacity: 1;
-    padding: 15px;
-
 }
 
 .graph__wrap_active {
     width: 100%;
     height: 100%;
-    /*overflow: hidden;*/
-    color: #088dcd;
     animation: fadeIn 1s ease-in forwards;
 }
 
@@ -26,7 +17,7 @@
     }
 
     to {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -43,7 +34,7 @@
 }
 
 .dragon__cloud {
-    background-image: url('../../../../../images/dragon-cloud.png');
+    background-image: url('../../../../../images/dragon-cloud1.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 100%;

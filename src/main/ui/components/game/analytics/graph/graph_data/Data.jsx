@@ -39,7 +39,7 @@ const Data = () => {
 
 	return (
 		<div className={styles.data__wrap}>
-			<h4 className={styles.data__title}></h4>
+			<div className={styles.data__title}>Your score</div>
 			<div className={styles.data__graph}>
 				<div className={styles.yAxis__wrap}>
 					<div className={styles.graph__yAxis}>

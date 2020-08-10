@@ -14,15 +14,26 @@ const Fireworks = () => {
 	const dispatch = useDispatch ();
 
 	useEffect (() => {
-		setTimeout (() => {
+		
+		const fireworksId = setTimeout (() => {
 			setFadeIn (true);
-			dispatch (favoriteDecksActions.setBanner ('totalsBanner'));
 		}, 14000);
 
-		setTimeout (() => {
+		const fireworksId1 = setTimeout (() => {
+			dispatch (favoriteDecksActions.setBanner ('totalsBanner'));
+		}, 15000);
+
+		const fireworksId2 = setTimeout (() => {
 			setFireworksImg ('');
 			setFireworksImg (fireworks)
-		}, 0)
+		}, 0);
+
+		return () => {
+
+			clearTimeout (fireworksId);
+			clearTimeout (fireworksId1);
+			clearTimeout (fireworksId2);
+		}
 
 	}, [ fadeIn, bannerForGraph ]);
 
@@ -32,15 +43,15 @@ const Fireworks = () => {
 	return (
 		<div className={classForGraph}>
 			<div className={styles.graph__graph}>
-				{/*<img src={graphImg} alt="graph"/>*/}
+				<div className={styles.fireworks__text}>
+					<div className={styles.fireworks__discr_big}>Congratulations !</div>
+					<div className={styles.fireworks__discr}>You passed the test.</div>
+				</div>
 				<img src={fireworksImg} alt="fireworks"/>
 				<audio autoPlay={true} muted={!isSound}>
 					<source src={fireworksSound} type="audio/mpeg"/>
 				</audio>
-				<div className={styles.fireworks__text}>
-					<div className={styles.fireworks__discr}>Congratulations !!!</div>
-					<div className={styles.fireworks__discr}>You passed the test. </div>
-				</div>
+
 			</div>
 		</div>
 	)
