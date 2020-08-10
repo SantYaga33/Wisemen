@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3221553ae12df247a19082a474f0ff16",
+    "revision": "4e94a09989cb7cae6add9024f728b908",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "6178f283a561c2fb7a03",
-    "url": "/Wisemen/static/css/main.a3ab453a.chunk.css"
+    "revision": "82f14814037284d528b9",
+    "url": "/Wisemen/static/css/main.86b776e1.chunk.css"
   },
   {
-    "revision": "772290be4081c1c6ba22",
-    "url": "/Wisemen/static/js/2.db0de6e0.chunk.js"
+    "revision": "bea4a8de33df72146f74",
+    "url": "/Wisemen/static/js/2.4fc2038e.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.db0de6e0.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.4fc2038e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6178f283a561c2fb7a03",
-    "url": "/Wisemen/static/js/main.7510f13e.chunk.js"
+    "revision": "82f14814037284d528b9",
+    "url": "/Wisemen/static/js/main.cd292b24.chunk.js"
   },
   {
     "revision": "4ecfdefd650125f61227",
@@ -452,6 +452,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/decor.e19904ec.png"
   },
   {
+    "revision": "8f86a0a52d319fa716b6f760280e03af",
+    "url": "/Wisemen/static/media/dragon-cloud.8f86a0a5.png"
+  },
+  {
     "revision": "7c27b305ed7129906b280dea055fb9cb",
     "url": "/Wisemen/static/media/dragon-fly.7c27b305.mp3"
   },
@@ -474,10 +478,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e9e6fdd188cca2f636c213d5592d312b",
     "url": "/Wisemen/static/media/game-bg-2.e9e6fdd1.jpg"
-  },
-  {
-    "revision": "e1d8185ba67934fe04845631bef49c70",
-    "url": "/Wisemen/static/media/graph.e1d8185b.png"
   },
   {
     "revision": "c13866850fe5345ae55a19e3c31fae88",
@@ -560,8 +560,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/sound-on.8ef34d26.svg"
   },
   {
-    "revision": "2a203dcc186e5a388cb4b18f801535f1",
-    "url": "/Wisemen/static/media/taper-1.2a203dcc.gif"
+    "revision": "53ae0a153bccc43e3924ee89494b449e",
+    "url": "/Wisemen/static/media/taper-2.53ae0a15.gif"
   },
   {
     "revision": "4d5da69bfe73f65def4414613d56b5bf",
