@@ -14,7 +14,7 @@ const Fireworks = () => {
 	const dispatch = useDispatch ();
 
 	useEffect (() => {
-		
+
 		const fireworksId = setTimeout (() => {
 			setFadeIn (true);
 		}, 14000);

@@ -21,10 +21,11 @@ import soundDeck from "../../audio/deck.mp3";
 import soundCard from "../../audio/card.mp3";
 import Matrix from "./analytics/matrix/Matrix";
 import Graph from "./analytics/graph/Graph";
-import { favoriteDecksActions, getCurrentFavDeck } from "../../../bll/favoriteDecks/favoriteDecksReducer";
+import { favoriteDecksActions, getCurrentFavDeck, setGameType } from "../../../bll/favoriteDecks/favoriteDecksReducer";
 import StartTest from "./test/Start_test";
 import StopTest from "./test/Stop_test";
 import { useLocation } from "react-router";
+import { loginActions } from "../../../auth/login/loginReducer";
 
 
 const Game = () => {
@@ -33,13 +34,17 @@ const Game = () => {
 	const [ startMatrix, setstartMatrix ] = useState (false);
 	const [ cardBg, setCardBg ] = useState (bg_1);
 	const { user } = useSelector ((state) => state.profile);
-	const { userFavoriteDecks, isSound, isTestModeStart } = useSelector ((state) => state.favoriteDecks);
+	const { userFavoriteDecks, isSound, isTestModeStart, gameType } = useSelector ((state) => state.favoriteDecks);
 	const dispatch = useDispatch ();
 	const location = useLocation ();
 
-	useEffect (() => {
+	let currentPath = location.pathname;
 
-		const currentPath = location.pathname;
+	useEffect(() => {
+		dispatch(loginActions.setCurrentLocation(currentPath));
+	}, [currentPath]);
+
+	useEffect (() => {
 
 		switch ( currentPath ) {
 
@@ -67,7 +72,15 @@ const Game = () => {
 
 
 	const onSetFavoriteDeck = (favoriteDeckId) => {
-		dispatch (getCurrentFavDeck (favoriteDeckId));
+
+		if( gameType === 'test') {
+			dispatch (setGameType ("inOrder"));
+			dispatch (favoriteDecksActions.setIsTestStart (false));
+			dispatch (favoriteDecksActions.setBanner ('dragonBanner'));
+		} else {
+			dispatch (getCurrentFavDeck (favoriteDeckId));
+			dispatch (favoriteDecksActions.setBanner ('infoBanner'));
+		}
 	};
 
 	const onClickSound = () => {
@@ -154,7 +167,6 @@ const Game = () => {
 								<NavLink to={GAME_PATH_DECK_BLUE} className={styles.header__link}
 										 onClick={() => {
 											 onSetFavoriteDeck ('favoriteDeckSlot0');
-											 dispatch (favoriteDecksActions.setBanner ('infoBanner'));
 										 }}>
 									<div className={`${styles.decks__item} ${styles.decks__item_1}`}>
 										<div className={styles.tooltip}>
@@ -169,7 +181,6 @@ const Game = () => {
 								<NavLink to={GAME_PATH_DECK_RED} className={styles.header__link}
 										 onClick={() => {
 											 onSetFavoriteDeck ('favoriteDeckSlot1');
-											 dispatch (favoriteDecksActions.setBanner ('infoBanner'));
 										 }}>
 									<div className={`${styles.decks__item} ${styles.decks__item_2}`}>
 										<div className={styles.tooltip}>
@@ -184,7 +195,6 @@ const Game = () => {
 								<NavLink to={GAME_PATH_DECK_GREEN} className={styles.header__link}
 										 onClick={() => {
 											 onSetFavoriteDeck ('favoriteDeckSlot2');;
-											 dispatch (favoriteDecksActions.setBanner ('infoBanner'));
 										 }}>
 									<div className={`${styles.decks__item} ${styles.decks__item_3}`}>
 										<div className={styles.tooltip}>
@@ -199,7 +209,6 @@ const Game = () => {
 								<NavLink to={GAME_PATH_DECK_PINK} className={styles.header__link}
 										 onClick={() => {
 											 onSetFavoriteDeck ('favoriteDeckSlot3');
-											 dispatch (favoriteDecksActions.setBanner ('infoBanner'));
 										 }}>
 									<div className={`${styles.decks__item} ${styles.decks__item_4}`}>
 										<div className={styles.tooltip}>
@@ -214,7 +223,6 @@ const Game = () => {
 								<NavLink to={GAME_PATH_DECK_YELLOW} className={styles.header__link}
 										 onClick={() => {
 											 onSetFavoriteDeck ('favoriteDeckSlot4');
-											 dispatch (favoriteDecksActions.setBanner ('infoBanner'));
 										 }}>
 									<div className={`${styles.decks__item} ${styles.decks__item_5}`}>
 										<div className={styles.tooltip}>
@@ -229,7 +237,6 @@ const Game = () => {
 								<NavLink to={GAME_PATH_DECK_PURPLE} className={styles.header__link}
 										 onClick={() => {
 											 onSetFavoriteDeck ('favoriteDeckSlot5');
-											 dispatch (favoriteDecksActions.setBanner ('infoBanner'));
 										 }}>
 									<div className={`${styles.decks__item} ${styles.decks__item_6}`}>
 										<div className={styles.tooltip}>
