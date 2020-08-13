@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9850e503eedbdbd8cd70e9c71f7b5942",
+    "revision": "75232af098321c84bf4ae52dad669820",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "bdf6e2dfe6373badc10c",
-    "url": "/Wisemen/static/css/main.5a3d88bf.chunk.css"
+    "revision": "6c99a0dca5461feb875f",
+    "url": "/Wisemen/static/css/main.3b9c2e92.chunk.css"
   },
   {
-    "revision": "fbe42c7f25453b0e36c9",
-    "url": "/Wisemen/static/js/2.631bb2c9.chunk.js"
+    "revision": "68d7de50fa15ea1d89d2",
+    "url": "/Wisemen/static/js/2.25f66372.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.631bb2c9.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.25f66372.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bdf6e2dfe6373badc10c",
-    "url": "/Wisemen/static/js/main.c1ac8f38.chunk.js"
+    "revision": "6c99a0dca5461feb875f",
+    "url": "/Wisemen/static/js/main.2bc8ef2d.chunk.js"
   },
   {
     "revision": "4ecfdefd650125f61227",
@@ -456,6 +456,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/dragon-cloud1.3f37ff49.png"
   },
   {
+    "revision": "442bcc699493f6b2adaf8acfcf7b6bbd",
+    "url": "/Wisemen/static/media/dragon-fireworks-fake.442bcc69.png"
+  },
+  {
     "revision": "7c27b305ed7129906b280dea055fb9cb",
     "url": "/Wisemen/static/media/dragon-fly.7c27b305.mp3"
   },
@@ -560,12 +564,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/sound-on.8ef34d26.svg"
   },
   {
-    "revision": "4d5da69bfe73f65def4414613d56b5bf",
-    "url": "/Wisemen/static/media/taper.4d5da69b.mp3"
+    "revision": "03e09429388e17a59de53a1587e9cdcf",
+    "url": "/Wisemen/static/media/taper-fake.03e09429.png"
   },
   {
-    "revision": "8981ce519fc33a69e04aa70f81e351aa",
-    "url": "/Wisemen/static/media/taper.8981ce51.gif"
+    "revision": "0d0a0c03bc49f49f6e2b7f99bd7f56c9",
+    "url": "/Wisemen/static/media/taper.0d0a0c03.gif"
+  },
+  {
+    "revision": "4d5da69bfe73f65def4414613d56b5bf",
+    "url": "/Wisemen/static/media/taper.4d5da69b.mp3"
   },
   {
     "revision": "24dd3426abe6746b924be4e4894f2db1",
