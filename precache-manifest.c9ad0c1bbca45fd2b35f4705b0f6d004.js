@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f43ad236f55c355444ea73207095205a",
+    "revision": "9850e503eedbdbd8cd70e9c71f7b5942",
     "url": "/Wisemen/index.html"
   },
   {
-    "revision": "1bcb2683b27135a94ec8",
-    "url": "/Wisemen/static/css/main.d475725e.chunk.css"
+    "revision": "bdf6e2dfe6373badc10c",
+    "url": "/Wisemen/static/css/main.5a3d88bf.chunk.css"
   },
   {
-    "revision": "45d05823d1a79e1ee52d",
-    "url": "/Wisemen/static/js/2.98585c46.chunk.js"
+    "revision": "fbe42c7f25453b0e36c9",
+    "url": "/Wisemen/static/js/2.631bb2c9.chunk.js"
   },
   {
     "revision": "8503aa6dc0746a928258d15b355b5936",
-    "url": "/Wisemen/static/js/2.98585c46.chunk.js.LICENSE.txt"
+    "url": "/Wisemen/static/js/2.631bb2c9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1bcb2683b27135a94ec8",
-    "url": "/Wisemen/static/js/main.06286248.chunk.js"
+    "revision": "bdf6e2dfe6373badc10c",
+    "url": "/Wisemen/static/js/main.c1ac8f38.chunk.js"
   },
   {
     "revision": "4ecfdefd650125f61227",
@@ -560,12 +560,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wisemen/static/media/sound-on.8ef34d26.svg"
   },
   {
-    "revision": "53ae0a153bccc43e3924ee89494b449e",
-    "url": "/Wisemen/static/media/taper-2.53ae0a15.gif"
-  },
-  {
     "revision": "4d5da69bfe73f65def4414613d56b5bf",
     "url": "/Wisemen/static/media/taper.4d5da69b.mp3"
+  },
+  {
+    "revision": "8981ce519fc33a69e04aa70f81e351aa",
+    "url": "/Wisemen/static/media/taper.8981ce51.gif"
   },
   {
     "revision": "24dd3426abe6746b924be4e4894f2db1",
