@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Wisemen/static/css/main.3b9c2e92.chunk.css",
-    "main.js": "/Wisemen/static/js/main.2bc8ef2d.chunk.js",
-    "main.js.map": "/Wisemen/static/js/main.2bc8ef2d.chunk.js.map",
+    "main.css": "/Wisemen/static/css/main.4103b331.chunk.css",
+    "main.js": "/Wisemen/static/js/main.23deefd6.chunk.js",
+    "main.js.map": "/Wisemen/static/js/main.23deefd6.chunk.js.map",
     "runtime-main.js": "/Wisemen/static/js/runtime-main.f6a3cafd.js",
     "runtime-main.js.map": "/Wisemen/static/js/runtime-main.f6a3cafd.js.map",
-    "static/js/2.25f66372.chunk.js": "/Wisemen/static/js/2.25f66372.chunk.js",
-    "static/js/2.25f66372.chunk.js.map": "/Wisemen/static/js/2.25f66372.chunk.js.map",
+    "static/js/2.b7d9327d.chunk.js": "/Wisemen/static/js/2.b7d9327d.chunk.js",
+    "static/js/2.b7d9327d.chunk.js.map": "/Wisemen/static/js/2.b7d9327d.chunk.js.map",
     "index.html": "/Wisemen/index.html",
-    "precache-manifest.960048734b73f7447c3aceaf325b5717.js": "/Wisemen/precache-manifest.960048734b73f7447c3aceaf325b5717.js",
+    "precache-manifest.8c300866e6e29ba0920c47e296bdf3b9.js": "/Wisemen/precache-manifest.8c300866e6e29ba0920c47e296bdf3b9.js",
     "service-worker.js": "/Wisemen/service-worker.js",
-    "static/css/main.3b9c2e92.chunk.css.map": "/Wisemen/static/css/main.3b9c2e92.chunk.css.map",
-    "static/js/2.25f66372.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.25f66372.chunk.js.LICENSE.txt",
+    "static/css/main.4103b331.chunk.css.map": "/Wisemen/static/css/main.4103b331.chunk.css.map",
+    "static/js/2.b7d9327d.chunk.js.LICENSE.txt": "/Wisemen/static/js/2.b7d9327d.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Wisemen/static/media/CSGrimrock.bd07c961.woff",
     "static/media/Intro-53-commpres-webm.webm": "/Wisemen/static/media/Intro-53-commpres-webm.f9da5a9c.webm",
     "static/media/LOGOUT.png": "/Wisemen/static/media/LOGOUT.83f9e0b2.png",
@@ -123,6 +123,7 @@
     "static/media/fireworks.gif": "/Wisemen/static/media/fireworks.29266203.gif",
     "static/media/fireworks.mp3": "/Wisemen/static/media/fireworks.edf4e4f6.mp3",
     "static/media/Graph.module.css": "/Wisemen/static/media/header-bg-cloud80.c1386685.png",
+    "static/media/Ladder.module.css": "/Wisemen/static/media/home-bg.9283fc3d.jpg",
     "static/media/login-shadow.png": "/Wisemen/static/media/login-shadow.ae8eb5b9.png",
     "static/media/main-bg-video-20.mp4": "/Wisemen/static/media/main-bg-video-20.05dde4ff.mp4",
     "static/media/main-bg-video-20.webm": "/Wisemen/static/media/main-bg-video-20.45ff871c.webm",
@@ -147,8 +148,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f6a3cafd.js",
-    "static/js/2.25f66372.chunk.js",
-    "static/css/main.3b9c2e92.chunk.css",
-    "static/js/main.2bc8ef2d.chunk.js"
+    "static/js/2.b7d9327d.chunk.js",
+    "static/css/main.4103b331.chunk.css",
+    "static/js/main.23deefd6.chunk.js"
   ]
 }
